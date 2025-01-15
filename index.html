@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3
-    dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBm
-    aWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWN
-    hcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVuaXZlcnNpd
-    HkiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTAiIHI9IjEiLz48cGF0aCBkPSJNMjIgMjBWOGgtNGwtNi00LTYgNEgy
-    djEyYTIgMiAwIDAgMCAyIDJoMTZhMiAyIDAgMCAwIDItMiIvPjxwYXRoIGQ9Ik02IDE3di4wMSIvPjxwYXRoIGQ9
-    Ik02IDEzdi4wMSIvPjxwYXRoIGQ9Ik0xOCAxN3YuMDEiLz48cGF0aCBkPSJNMTggMTN2LjAxIi8+PHBhdGggZD0i
-    TTE0IDIydi01YTIgMiAwIDAgMC0yLTJhMiAyIDAgMCAwLTIgMnY1Ii8+PC9zdmc+" />
     <title>BSCS II-B</title>
     <style>
-        /* Global Styles */
         body {
             display: flex;
             justify-content: center;
@@ -25,12 +16,46 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
         }
 
+        .page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+        }
+
         .container {
             text-align: center;
             width: 100%;
             max-width: 500px;
             padding: 20px;
             box-sizing: border-box;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .info-corner {
+            background-color: rgba(58, 69, 79, 0.8);
+            padding: 30px;
+            border-radius: 16px;
+            width: 300px;
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .info-corner h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .info-corner p {
+            color: white;
+            line-height: 1.6;
         }
 
         h1 {
@@ -113,14 +138,28 @@
             font-size: 14px;
         }
 
-        /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 24px;
+            .page-container {
+                flex-direction: column;
+                align-items: center;
             }
 
             .container {
+                position: static;
+                transform: none;
                 padding: 10px;
+            }
+
+            .info-corner {
+                position: static;
+                width: 90%;
+                max-width: 450px;
+                margin-top: 20px;
+                transform: none;
+            }
+
+            h1 {
+                font-size: 24px;
             }
 
             .form-container {
@@ -149,47 +188,66 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome Students</h1>
-        <div class="form-container">
-            <label for="rollNumber">Roll Number</label>
-            <input 
-                type="text" 
-                id="rollNumber" 
-                name="rollNumber" 
-            >
-            <br>
-            <label for="cnic">CNIC</label>
-            <input 
-                type="text" 
-                id="cnic" 
-                name="cnic" 
-                placeholder="00000-0000000-0" 
-                maxlength="15" 
-                oninput="formatCNIC(this)"
-            >
-            <br>
-            <p id="marksDisplay" style="display: none;">Accounting Fundamentals marks: <span id="marksValue"></span></p>
-            <button type="button" onclick="checkRoll()">Find</button>
-            <p id="errorMessage">Fill required fields</p>
+    <div class="page-container">
+        <div class="container">
+            <h1>Welcome Students</h1>
+            <div class="form-container">
+                <label for="rollNumber">Roll Number</label>
+                <input 
+                    type="text" 
+                    id="rollNumber" 
+                    name="rollNumber" 
+                    placeholder="CS-000"
+                    maxlength="6"
+                    pattern="CS-\d{3}"
+                    value="CS-"
+                    oninput="this.value = this.value.startsWith('CS-') ? this.value : 'CS-' + this.value.replace(/\D/g, '').slice(0,3)"
+                >
+                <br>
+                <label for="cnic">CNIC</label>
+                <input 
+                    type="text" 
+                    id="cnic" 
+                    name="cnic" 
+                    placeholder="00000-0000000-0" 
+                    maxlength="15" 
+                    oninput="formatCNIC(this)"
+                >
+                <br>
+                <p id="marksDisplay" style="display: none;">Accounting Fundamentals marks: <span id="marksValue"></span></p>
+                <button type="button" onclick="checkRoll()" id="findButton">Find</button>
+                <script>
+                    document.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter') {
+                            document.getElementById('findButton').click();
+                        }
+                    });
+                </script>
+                <p id="errorMessage">Fill required fields</p>
+            </div>
+            <div class="footer">
+                <a href="https://xeeshan.carrd.co/">
+                    <span>© Developed and managed by Zeeshan Sarfraz</span>
+                </a>
+            </div>
         </div>
-        <div class="footer">
-            <a href="https://xeeshan.carrd.co/">
-                <span>© Developed and managed by Zeeshan Sarfraz</span>
-            </a>
+
+        <div class="info-corner">
+            <h2>Info Corner</h2>
+            <p>This site has been made to let every student check their grades, soon it will have many other option too, stay tunned....</p>
         </div>
     </div>
 
     <script>
         function formatCNIC(input) {
-            let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+            let value = input.value.replace(/\D/g, '');
             if (value.length > 5) {
                 value = value.slice(0, 5) + '-' + value.slice(5);
             }
             if (value.length > 13) {
                 value = value.slice(0, 13) + '-' + value.slice(13);
             }
-            input.value = value.slice(0, 15); // Ensure maxlength of 15
+            input.value = value.slice(0, 15); 
         }
 
         function checkRoll() {
