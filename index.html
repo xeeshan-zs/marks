@@ -1,74 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Marks details of BSCS-II(B)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        /* Global Styles */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        label {
+            font-size: 17px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        input {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 12px 0;
+            font-size: 17px;
+            width: 80%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        button {
+            background-color: #007AFF;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 30px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all 0.2s;
+            width: 100%;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 500;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        #errorMessage {
+            color: #ff4444;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            text-decoration: none;
+        }
+
+        .footer span {
+            color: #007AFF;
+            font-size: 14px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            input, button {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
-<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #1a1a1a; color: #ffffff;">
-    <div style="text-align: center;">
-        <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; font-weight: 600; font-size: 32px; margin-bottom: 30px;">Welcome Students</h1>
-        <div style="margin: 20px; background-color: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 16px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
-            <label for="rollNumber" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; font-size: 17px; font-weight: 500; color: #ffffff;">Roll Number</label>
+<body>
+    <div class="container">
+        <h1>Welcome Students</h1>
+        <div class="form-container">
+            <label for="rollNumber">Roll Number</label>
             <input 
-            type="text" 
-            id="rollNumber" 
-            name="rollNumber" 
-            style="background-color: rgba(255, 255, 255, 0.1); color: white; border: none; border-radius: 12px; padding: 15px; margin: 12px 0; font-size: 17px; width: 100%; max-width: 280px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                type="text" 
+                id="rollNumber" 
+                name="rollNumber" 
+            >
             <br>
-            <label for="cnic" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; font-size: 17px; font-weight: 500; color: #ffffff;">CNIC</label>
+            <label for="cnic">CNIC</label>
             <input 
-            type="text" 
-            id="cnic" 
-            name="cnic" 
-            placeholder="00000-0000000-0" 
-            maxlength="15" 
-            style="background-color: rgba(255, 255, 255, 0.1); color: white; border: none; border-radius: 12px; padding: 15px; margin: 12px 0; font-size: 17px; width: 100%; max-width: 280px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" 
-            oninput="formatCNIC(this)"
-          >
-          <script>
-          function formatCNIC(input) {
-            let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
-            if (value.length > 5) {
-              value = value.slice(0, 5) + '-' + value.slice(5);
-            }
-            if (value.length > 13) {
-              value = value.slice(0, 13) + '-' + value.slice(13);
-            }
-            input.value = value.slice(0, 15); // Ensure maxlength of 15
-          }
-          </script>
-          <br>
-          <p id="marksDisplay" style="display: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; font-size: 17px; font-weight: 500; color: #ffffff; margin: 10px 0;">Accounting Fundamentals marks: <span id="marksValue"></span></p>
-          <button type="button" onclick="checkRoll()" style="background-color: #007AFF; color: white; border: none; border-radius: 12px; padding: 15px 30px; margin-top: 20px; cursor: pointer; font-size: 17px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; transition: all 0.2s; width: 100%; max-width: 280px;">Find</button>
-          <p id="errorMessage" style="color: #ff4444; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; font-size: 14px; margin-top: 10px; display: none;">Fill required fields</p>
-          <p id="notFoundMessage" style="color: #ff4444; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; font-size: 14px; margin-top: 10px; display: none;">Record not found</p>
+                type="text" 
+                id="cnic" 
+                name="cnic" 
+                placeholder="00000-0000000-0" 
+                maxlength="15" 
+                oninput="formatCNIC(this)"
+            >
+            <br>
+            <p id="marksDisplay" style="display: none;">Accounting Fundamentals marks: <span id="marksValue"></span></p>
+            <button type="button" onclick="checkRoll()">Find</button>
+            <p id="errorMessage">Fill required fields</p>
         </div>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 5px; margin-top: 20px;">
-            <a href="https://xeeshan.carrd.co/" style="text-decoration: none; cursor: pointer;">
-                <span style="color: #007AFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; font-size: 14px;">© Developed and managed by Zeeshan Sarfraz</span>
+        <div class="footer">
+            <a href="https://xeeshan.carrd.co/">
+                <span>© Developed and managed by Zeeshan Sarfraz</span>
             </a>
         </div>
+    </div>
 
-        <script>
-            function checkRoll() {
-                const rollNumber = document.getElementById('rollNumber').value;
-                const cnic = document.getElementById('cnic').value;
-                const errorMessage = document.getElementById('errorMessage');
-                const marksDisplay = document.getElementById('marksDisplay');
-                const marksValue = document.getElementById('marksValue');
-                const notFoundMessage = document.getElementById('notFoundMessage');
-                
-                if (!rollNumber || !cnic) {
-                    errorMessage.style.display = 'block';
-                    marksDisplay.style.display = 'none';
-                    notFoundMessage.style.display = 'none';
-                    return;
-                }
-                
-                errorMessage.style.display = 'none';
+    <script>
+        function formatCNIC(input) {
+            let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+            if (value.length > 5) {
+                value = value.slice(0, 5) + '-' + value.slice(5);
+            }
+            if (value.length > 13) {
+                value = value.slice(0, 13) + '-' + value.slice(13);
+            }
+            input.value = value.slice(0, 15); // Ensure maxlength of 15
+        }
 
-                const studentData = {
-                    'CS-000': { cnic: '00000-0000000-0', marks: 100 },
+        function checkRoll() {
+            const rollNumber = document.getElementById('rollNumber').value;
+            const cnic = document.getElementById('cnic').value;
+            const errorMessage = document.getElementById('errorMessage');
+            const marksDisplay = document.getElementById('marksDisplay');
+            const marksValue = document.getElementById('marksValue');
+            
+            if (!rollNumber || !cnic) {
+                errorMessage.style.display = 'block';
+                marksDisplay.style.display = 'none';
+                return;
+            }
+            
+            errorMessage.style.display = 'none';
+
+            const studentData = {
+                'CS-000': { cnic: '00000-0000000-0', marks: 100 },
                     'CS-341': { cnic: '35202-1421567-5', marks: 65 },
                     'CS-342': { cnic: '36601-7109122-1', marks: 50 },
                     'CS-343': { cnic: '35202-8498405-1', marks: 60 },
@@ -111,19 +243,16 @@
                     'CS-382': { cnic: '45207-7949809-5', marks: 43 }
                 };
 
-                const student = studentData[rollNumber];
-                if (student && student.cnic === cnic) {
-                    marksValue.textContent = student.marks;
-                    marksDisplay.style.display = 'block';
-                    errorMessage.style.display = 'none';
-                    notFoundMessage.style.display = 'none';
-                } else {
-                    marksDisplay.style.display = 'none';
-                    errorMessage.style.display = 'none';
-                    notFoundMessage.style.display = 'block';
-                }
+            const student = studentData[rollNumber];
+            if (student && student.cnic === cnic) {
+                marksValue.textContent = student.marks;
+                marksDisplay.style.display = 'block';
+                errorMessage.style.display = 'none';
+            } else {
+                marksDisplay.style.display = 'none';
+                errorMessage.style.display = 'block';
             }
-        </script>
-    </div>
+        }
+    </script>
 </body>
 </html>
