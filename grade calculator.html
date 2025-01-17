@@ -17,62 +17,6 @@
             color: #000;
         }
 
-        /* Menubar style */
-        nav {
-            background-color: #333;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 10px 0;
-            z-index: 10;
-        }
-
-         nav ul {
-            list-style-type: none;
-             margin: 0;
-             padding: 0;
-             display: flex;
-             justify-content: center;
-         }
-
-         nav ul li {
-             margin: 0 15px;
-         }
-
-         nav ul li a {
-              text-decoration: none;
-              color: #ffffff;
-              font-size: 18px;
-              font-weight: 500;
-         }
-
-         nav ul li a:hover {
-              color: #007AFF;
-         }
-
-        /* Adjust content for the menubar */
-        .page-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-            position: relative;
-            margin-top: 50px; /* Add space below menubar */
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 500px;
-            padding: 20px;
-            box-sizing: border-box;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -91,17 +35,16 @@
         }
 
         .header {
-            margin-top: 50px;  /* added this padding so it does not overlap with the Menubar*/
             text-align: center;
             margin-bottom: 2vh;
         }
 
-            .header h1 {
-                font-size: 34px;
-                font-weight: 700;
-                margin: 0;
-                color: #000;
-            }
+        .header h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin: 0;
+            color: #000;
+        }
 
         .current-gpa {
             display: flex;
@@ -120,11 +63,11 @@
             transition: all 0.2s;
         }
 
-            input:focus {
-                outline: none;
-                border-color: #007aff;
-                box-shadow: 0 0 0 3px rgba(0,122,255,0.2);
-            }
+        input:focus {
+            outline: none;
+            border-color: #007aff;
+            box-shadow: 0 0 0 3px rgba(0,122,255,0.2);
+        }
 
         .grades-table {
             width: 100%;
@@ -137,23 +80,23 @@
             overflow: hidden;
         }
 
-            .grades-table th, .grades-table td {
-                padding: 12px;
-                border-bottom: 1px solid #e5e5ea;
-                text-align: center;
-            }
+        .grades-table th, .grades-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e5ea;
+            text-align: center;
+        }
 
-            .grades-table th {
-                background-color: #f8f8f8;
-                font-weight: 600;
-                color: #666;
-            }
+        .grades-table th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+            color: #666;
+        }
 
-            .grades-table input {
-                width: 90%;
-                padding: 8px;
-                border-radius: 8px;
-            }
+        .grades-table input {
+            width: 90%;
+            padding: 8px;
+            border-radius: 8px;
+        }
 
         button {
             background: #007aff;
@@ -167,13 +110,13 @@
             transition: all 0.2s;
         }
 
-            button:hover {
-                background: #0066d6;
-            }
+        button:hover {
+            background: #0066d6;
+        }
 
-            button:active {
-                transform: scale(0.98);
-            }
+        button:active {
+            transform: scale(0.98);
+        }
 
         .controls {
             display: flex;
@@ -200,22 +143,21 @@
             flex: 1;
         }
 
-            .summary-item label {
-                display: block;
-                margin-bottom: 8px;
-                font-weight: 600;
-                color: #666;
-                font-size: 15px;
-            }
+        .summary-item label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #666;
+            font-size: 15px;
+        }
 
         .disabled-input {
             background-color: #f2f2f7;
             color: #666;
         }
 
-        /* Remove spinner buttons */
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
             -webkit-appearance: none;
             margin: 0;
         }
@@ -234,33 +176,32 @@
             text-align: center;
         }
 
-            .footer a {
-                text-decoration: none;
-                padding: 10px 20px;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-                background: rgba(0, 122, 255, 0.1);
-            }
+        .footer a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: rgba(0, 122, 255, 0.1);
+        }
 
-                .footer a:hover {
-                    background: rgba(0, 122, 255, 0.2);
-                    transform: translateY(-2px);
-                }
+        .footer a:hover {
+            background: rgba(0, 122, 255, 0.2);
+            transform: translateY(-2px);
+        }
 
-            .footer span {
-                color: #007AFF;
-                font-size: 14px;
-                font-weight: 500;
-            }
+        .footer span {
+            color: #007AFF;
+            font-size: 14px;
+            font-weight: 500;
+        }
 
-            .footer a:hover span {
-                text-decoration: underline;
-            }
+        .footer a:hover span {
+            text-decoration: underline;
+        }
 
-        /* Dark mode support */
         @media (prefers-color-scheme: dark) {
             body {
-                background-color: #000;
+                background-color: #1a1a1a;
                 color: #fff;
             }
 
@@ -274,14 +215,14 @@
                 color: #fff;
             }
 
-                .grades-table th {
-                    background-color: #2c2c2e;
-                    color: #999;
-                }
+            .grades-table th {
+                background-color: #2c2c2e;
+                color: #999;
+            }
 
-                .grades-table td {
-                    border-color: #38383a;
-                }
+            .grades-table td {
+                border-color: #38383a;
+            }
 
             .disabled-input {
                 background-color: #2c2c2e;
@@ -296,12 +237,11 @@
                 background: rgba(0, 122, 255, 0.15);
             }
 
-                .footer a:hover {
-                    background: rgba(0, 122, 255, 0.25);
-                }
+            .footer a:hover {
+                background: rgba(0, 122, 255, 0.25);
+            }
         }
 
-        /* Mobile responsiveness */
         @media (max-width: 768px) {
             .container {
                 padding: 16px;
@@ -328,14 +268,6 @@
     </style>
 </head>
 <body>
-
-    <nav>
-        <ul>
-            <li><a href="https://marks.atrons.net/">Marks</a></li>
-        </ul>
-    </nav>
-
-
     <div class="container">
         <div class="header">
             <h1>Grade Calculator</h1>
@@ -365,7 +297,6 @@
                 </tr>
             </thead>
             <tbody id="gradesTableBody">
-                <!-- Rows will be added dynamically -->
             </tbody>
         </table>
 
@@ -405,47 +336,64 @@
     </div>
 
     <script>
+        let currentRows = 0;
+        const MAX_ROWS = 12;
+
         function getGradeAndPoints(marks) {
-            if (marks >= 90 && marks <= 100) return { grade: 'A1', points: 4.0 };
-            if (marks >= 80 && marks <= 89) return { grade: 'A2', points: 4.0 };
-            if (marks >= 77 && marks <= 79) return { grade: 'A3', points: 3.66 };
-            if (marks >= 74 && marks <= 76) return { grade: 'B1', points: 3.33 };
-            if (marks >= 70 && marks <= 73) return { grade: 'B2', points: 3.0 };
-            if (marks >= 67 && marks <= 69) return { grade: 'B3', points: 2.66 };
-            if (marks >= 64 && marks <= 66) return { grade: 'C1', points: 2.33 };
-            if (marks >= 60 && marks <= 63) return { grade: 'C2', points: 2.0 };
-            if (marks >= 50 && marks <= 59) return { grade: 'D', points: 1.5 };
-            if (marks >= 0 && marks <= 49) return { grade: 'F', points: 0.0 };
-            return { grade: '', points: 0 };
+            if (marks >= 90 && marks <= 100) return {grade: 'A1', points: 4.0};
+            if (marks >= 80 && marks <= 89) return {grade: 'A2', points: 4.0};
+            if (marks >= 77 && marks <= 79) return {grade: 'A3', points: 3.66};
+            if (marks >= 74 && marks <= 76) return {grade: 'B1', points: 3.33};
+            if (marks >= 70 && marks <= 73) return {grade: 'B2', points: 3.0};
+            if (marks >= 67 && marks <= 69) return {grade: 'B3', points: 2.66};
+            if (marks >= 64 && marks <= 66) return {grade: 'C1', points: 2.33};
+            if (marks >= 60 && marks <= 63) return {grade: 'C2', points: 2.0};
+            if (marks >= 50 && marks <= 59) return {grade: 'D', points: 1.5};
+            if (marks >= 0 && marks <= 49) return {grade: 'F', points: 0.0};
+            return {grade: '', points: 0};
         }
 
         function updateRowCalculations(row) {
             const marks = parseFloat(row.querySelector('.marks').value) || 0;
             const creditHours = parseFloat(row.querySelector('.credit-hours').value) || 0;
-
-            const { grade, points } = getGradeAndPoints(marks);
-
+            
+            const {grade, points} = getGradeAndPoints(marks);
+            
             row.querySelector('.grade').value = grade;
             row.querySelector('.points').value = points;
-
+            
             const gradePoints = points * creditHours;
             row.querySelector('.grade-points').value = gradePoints.toFixed(2);
+
+            if (row === document.querySelector('#gradesTableBody tr:last-child') && 
+                (marks || creditHours) && currentRows < MAX_ROWS) {
+                addNewRow();
+            }
+        }
+
+        function addNewRow() {
+            const tbody = document.getElementById('gradesTableBody');
+            const row = document.createElement('tr');
+            currentRows++;
+            row.innerHTML = `
+                <td>${currentRows}</td>
+                <td><input type="text" class="subject-name" placeholder="Subject ${currentRows}"></td>
+                <td><input type="number" class="marks" min="0" max="100" placeholder="0-100" oninput="updateRowCalculations(this.closest('tr'))"></td>
+                <td><input type="text" class="grade" readonly></td>
+                <td><input type="text" class="points" readonly></td>
+                <td><input type="number" class="credit-hours" min="0" placeholder="Hours" oninput="updateRowCalculations(this.closest('tr'))"></td>
+                <td><input type="text" class="grade-points" readonly></td>
+            `;
+            tbody.appendChild(row);
         }
 
         function initializeTable() {
             const tbody = document.getElementById('gradesTableBody');
-            for (let i = 0; i < 10; i++) {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                            <td>${i + 1}</td>
-                            <td><input type="text" class="subject-name" placeholder="Subject ${i + 1}"></td>
-                            <td><input type="number" class="marks" min="0" max="100" placeholder="0-100" oninput="updateRowCalculations(this.closest('tr'))"></td>
-                            <td><input type="text" class="grade" readonly></td>
-                            <td><input type="text" class="points" readonly></td>
-                            <td><input type="number" class="credit-hours" min="0" placeholder="Hours" oninput="updateRowCalculations(this.closest('tr'))"></td>
-                            <td><input type="text" class="grade-points" readonly></td>
-                        `;
-                tbody.appendChild(row);
+            tbody.innerHTML = '';
+            currentRows = 0;
+            
+            for(let i = 0; i < 6; i++) {
+                addNewRow();
             }
         }
 
@@ -456,7 +404,7 @@
             document.querySelectorAll('#gradesTableBody tr').forEach(row => {
                 const gradePoints = parseFloat(row.querySelector('.grade-points').value) || 0;
                 const creditHours = parseFloat(row.querySelector('.credit-hours').value) || 0;
-
+                
                 sumGradePoints += gradePoints;
                 sumCreditHours += creditHours;
             });
@@ -469,8 +417,8 @@
 
             const currentGpa = parseFloat(document.getElementById('currentGpa').value) || 0;
             const totalCreditHours = parseFloat(document.getElementById('totalCreditHours').value) || 0;
-
-            if (currentGpa && totalCreditHours) {
+            
+            if(currentGpa && totalCreditHours) {
                 const cgpa = ((currentGpa * totalCreditHours) + sumGradePoints) / (totalCreditHours + sumCreditHours);
                 document.getElementById('cgpa').value = cgpa.toFixed(3);
             }
@@ -478,9 +426,9 @@
 
         function resetCalculator() {
             document.querySelectorAll('input').forEach(input => input.value = '');
+            initializeTable();
         }
 
-        // Initialize on page load
         window.onload = initializeTable;
     </script>
 </body>
