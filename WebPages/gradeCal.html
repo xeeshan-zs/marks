@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="icon" href="../assets/images/cal-icon.svg">
+    <link rel="stylesheet" href="../CSS/gradeCalStyles.css">
+    <script src="../JS/gradeCalScript.js"></script>
+
+</head>
+<body>
+
+    <!-- Menubar -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="marks.html">Marks</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="header">
+                <h1>Grade Calculator</h1>
+            </div>
+
+            <div class="current-gpa">
+                <div>
+                    <label for="currentGpa">Previous GPA</label>
+                    <input type="number" id="currentGpa" step="0.01" placeholder="Enter current GPA">
+                </div>
+                <div>
+                    <label for="totalCreditHours">Total Credit Hours</label>
+                    <input type="number" id="totalCreditHours" placeholder="Enter total credit hours">
+                </div>
+            </div>
+
+            <table class="grades-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Subject Name</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                        <th>Points</th>
+                        <th>Credit Hours</th>
+                        <th>Grade Points</th>
+                    </tr>
+                </thead>
+                <tbody id="gradesTableBody">
+                </tbody>
+            </table>
+
+            <div class="controls">
+                <button onclick="resetCalculator()" style="background: #ff3b30;">Reset Calculator</button>
+                <button onclick="calculate()">Calculate</button>
+            </div>
+
+            <div class="summary">
+                <div class="summary-row">
+                    <div class="summary-item">
+                        <label>Sum Credit Hours</label>
+                        <input type="text" id="creditHoursSum" readonly class="disabled-input">
+                    </div>
+                    <div class="summary-item">
+                        <label>Sum Grade Points</label>
+                        <input type="text" id="gradePointsSum" readonly class="disabled-input">
+                    </div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-item">
+                        <label>Semester GPA</label>
+                        <input type="text" id="semesterGpa" readonly class="disabled-input">
+                    </div>
+                    <div class="summary-item">
+                        <label>CGPA</label>
+                        <input type="text" id="cgpa" readonly class="disabled-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <a href="https://xeeshan.carrd.co/">
+                    <span>© Developed and managed by Zeeshan Sarfraz</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

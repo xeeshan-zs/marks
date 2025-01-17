@@ -1,289 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSCS II-B</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
-        }
-
-        .page-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-            position: relative;
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 500px;
-            padding: 20px;
-            box-sizing: border-box;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        h1 {
-            font-weight: 600;
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-
-        .form-container {
-            margin: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 16px;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-
-        label {
-            font-size: 17px;
-            font-weight: 500;
-            color: #ffffff;
-        }
-
-        input {
-            background-color: white;
-            color: black;
-            border: none;
-            border-radius: 12px;
-            padding: 15px;
-            margin: 12px 0;
-            font-size: 17px;
-            width: 80%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        button {
-            background-color: #007AFF;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            padding: 15px 30px;
-            margin-top: 20px;
-            cursor: pointer;
-            font-size: 17px;
-            font-weight: 600;
-            transition: all 0.2s;
-            width: 100%;
-        }
-
-        p {
-            font-size: 17px;
-            font-weight: 500;
-            color: #ffffff;
-            margin: 10px 0;
-        }
-
-        #errorMessage {
-            color: #ff4444;
-            font-size: 14px;
-            margin-top: 10px;
-            display: none;
-        }
-
-        .footer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            margin-top: 20px;
-        }
-
-        .footer a {
-            text-decoration: none;
-        }
-
-        .footer span {
-            color: #007AFF;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .page-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .container {
-                position: static;
-                transform: none;
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            .form-container {
-                padding: 20px;
-            }
-
-            button {
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 20px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 12px;
-            }
-
-            input, button {
-                max-width: 100%;
-            }
-        }
-    </style>
+    <title>Student Portal</title>
+    <link rel="icon" href="assets/images/favi-icon.svg">
+    <link rel="stylesheet" href="CSS/homeStyles.css" />
+    <script src="JS/marksScript.js" defer></script>
 </head>
+
 <body>
-    <div class="page-container">
-        <div class="container">
-            <h1>Welcome Students</h1>
-            <div class="form-container">
-                <label for="rollNumber">Roll Number</label>
-                <input 
-                    type="text" 
-                    id="rollNumber" 
-                    name="rollNumber" 
-                    placeholder="CS-000"
-                    maxlength="6"
-                    pattern="CS-\d{3}"
-                    value="CS-"
-                    oninput="this.value = this.value.startsWith('CS-') ? this.value : 'CS-' + this.value.replace(/\D/g, '').slice(0,3)"
-                >
-                <br>
-                <label for="cnic">CNIC</label>
-                <input 
-                    type="text" 
-                    id="cnic" 
-                    name="cnic" 
-                    placeholder="00000-0000000-0" 
-                    maxlength="15" 
-                    oninput="formatCNIC(this)"
-                >
-                <br>
-                <p id="marksDisplay" style="display: none;">Accounting Fundamentals marks: <span id="marksValue"></span></p>
-                <button type="button" onclick="checkRoll()" id="findButton">Find</button>
-                <script>
-                    document.addEventListener('keypress', function(e) {
-                        if (e.key === 'Enter') {
-                            document.getElementById('findButton').click();
-                        }
-                    });
-                </script>
-                <p id="errorMessage">Fill required fields</p>
+    <div class="header">
+        <div class="logo">
+            Student Portal
+            <span>By ZS & ATRONS</span>
+        </div>
+        <div class="tabs">
+            <a href="WebPages/aboutUs.html">About Us</a>
+            <a href="WebPages/contact.html">Contact</a>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <img src="assets/images/light-icon.svg" alt="Theme Toggle">
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title">STUDENT SERVICES</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Results</h3>
+                <p>Attention students! The results for the 2nd semester final exams are now available. Access your comprehensive result card, including detailed marks breakdown, through our secure student portal.</p>
+                <a href="WebPages/marks.html">View Detail</a>
             </div>
-            <div class="footer">
-                <a href="https://xeeshan.carrd.co/">
-                    <span>Â© Developed and managed by Zeeshan Sarfraz</span>
-                </a>
+
+            <div class="service-card">
+                <h3>Grade Calculator</h3>
+                <p>Calculate your GPA easily by entering your course credit hours and marks. Our calculator also supports CGPA calculation by factoring in your previous GPA and total credit hours completed.</p>
+                <a href="WebPages/gradeCal.html">View Detail</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Students Information</h3>
+                <p>This section is currently under development. It will soon be made available for the students of BSCS III-B to access and utilize.</p>
+                <a href="#" onclick="alert('Work in progress'); return false;">View Detail</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Desktop Applications</h3>
+                <p>Access our collection of Java desktop applications. Download user-friendly tools including grade calculators, and much more for offline use on your computer.</p>
+                <a href="#" onclick="alert('Work in progress'); return false;">View Detail</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Coming soon...</h3>
+                <a href="#" onclick="alert('Work in progress'); return false;">View Detail</a>
             </div>
         </div>
     </div>
 
-   <script>
-        function formatCNIC(input) {
-            let value = input.value.replace(/\D/g, '');
-            if (value.length > 5) {
-                value = value.slice(0, 5) + '-' + value.slice(5);
-            }
-            if (value.length > 13) {
-                value = value.slice(0, 13) + '-' + value.slice(13);
-            }
-            input.value = value.slice(0, 15); 
-        }
-
-        function checkRoll() {
-            const rollNumber = document.getElementById('rollNumber').value;
-            const cnic = document.getElementById('cnic').value;
-            const errorMessage = document.getElementById('errorMessage');
-            const marksDisplay = document.getElementById('marksDisplay');
-            const marksValue = document.getElementById('marksValue');
-            
-            if (!rollNumber || !cnic) {
-                errorMessage.style.display = 'block';
-                marksDisplay.style.display = 'none';
-                return;
-            }
-            
-            errorMessage.style.display = 'none';
-
-            const studentData = {
-                'CS-000': { cnic: '00000-0000000-0', marks: 100 },
-                    'CS-341': { cnic: '35202-1421567-5', marks: 65 },
-                    'CS-342': { cnic: '36601-7109122-1', marks: 50 },
-                    'CS-343': { cnic: '35202-8498405-1', marks: 60 },
-                    'CS-344': { cnic: '34104-4843906-5', marks: 71 },
-                    'CS-345': { cnic: '35201-7578377-5', marks: 89 },
-                    'CS-346': { cnic: '38201-3268906-7', marks: 61 },
-                    'CS-347': { cnic: '32402-3956830-9', marks: 80 },
-                    'CS-348': { cnic: '35202-6279376-1', marks: 55 },
-                    'CS-350': { cnic: '35301-8410656-1', marks: 25 },
-                    'CS-351': { cnic: '34302-9700957-6', marks: 65 },
-                    'CS-352': { cnic: '33302-2415581-0', marks: 58 },
-                    'CS-353': { cnic: '35200-8149405-0', marks: 53 },
-                    'CS-354': { cnic: '33202-1783734-8', marks: 62 },
-                    'CS-355': { cnic: '33202-2520122-4', marks: 55 },
-                    'CS-356': { cnic: '35201-5912679-9', marks: 62 },
-                    'CS-357': { cnic: '35102-9229477-9', marks: 72 },
-                    'CS-358': { cnic: '35202-5398052-8', marks: 70 },
-                    'CS-359': { cnic: '35202-5233164-4', marks: 60 },
-                    'CS-360': { cnic: '35201-9601691-5', marks: 45 },
-                    'CS-361': { cnic: '35202-9596415-7', marks: 52 },
-                    'CS-362': { cnic: '35404-2702964-7', marks: 54 },
-                    'CS-363': { cnic: '35202-1628533-9', marks: 53 },
-                    'CS-364': { cnic: '36502-1848650-1', marks: 80 },
-                    'CS-365': { cnic: '32102-2835192-5', marks: 39 },
-                    'CS-366': { cnic: '35503-0231268-1', marks: 52 },
-                    'CS-367': { cnic: '32304-6621089-5', marks: 50 },
-                    'CS-368': { cnic: '35202-5035816-5', marks: 65 },
-                    'CS-369': { cnic: '35202-5847881-3', marks: 50 },
-                    'CS-370': { cnic: '38404-2215877-3', marks: 66 },
-                    'CS-371': { cnic: '35201-0926430-3', marks: 70 },
-                    'CS-372': { cnic: '35404-6545732-1', marks: 63 },
-                    'CS-373': { cnic: '34102-4303284-6', marks: 60 },
-                    'CS-374': { cnic: '35202-4680119-2', marks: 62 },
-                    'CS-375': { cnic: '35201-4557403-8', marks: 66 },
-                    'CS-376': { cnic: '35201-9784588-1', marks: 56 },
-                    'CS-378': { cnic: '37405-0736903-5', marks: 60 },
-                    'CS-379': { cnic: '38401-3392252-1', marks: 85 },
-                    'CS-380': { cnic: '34501-2673990-2', marks: 63 },
-                    'CS-381': { cnic: '32403-4590228-7', marks: 57 },
-                    'CS-382': { cnic: '45207-7949809-5', marks: 43 }
-                };
-
-            const student = studentData[rollNumber];
-            if (student && student.cnic === cnic) {
-                marksValue.textContent = student.marks;
-                marksDisplay.style.display = 'block';
-                errorMessage.style.display = 'none';
-            } else {
-                marksDisplay.style.display = 'none';
-                errorMessage.style.display = 'block';
-            }
-        }
-    </script>
+    <footer class="footer text-muted">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="text-muted" href="/copyright/">© 2025. All rights reserved</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 text-center text-lg-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            &copy; Developed and managed by <a class="text-muted" href="https://xeeshan.carrd.co" target="_blank">Zeeshan Sarfraz</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
