@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSCS II-B</title>
+    <link rel="icon" href="../assets/images/marks-icon.svg">
+    <link rel="stylesheet" href="../CSS/marksStyles.css">
+    <script src="../JS/marksScript.js" defer></script>
+
+</head>
+<body>
+
+    <!-- Menubar -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="gradeCal.html">Calculator</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-container">
+        <div class="container">
+            <h1>Welcome Students</h1>
+            <div class="form-container">
+                <label for="rollNumber">Roll Number</label>
+                <input type="text"
+                       id="rollNumber"
+                       name="rollNumber"
+                       placeholder="CS-000"
+                       maxlength="6"
+                       pattern="CS-\d{3}"
+                       value="CS-"
+                       oninput="this.value = this.value.startsWith('CS-') ? this.value : 'CS-' + this.value.replace(/\D/g, '').slice(0,3)">
+                <br>
+                <label for="cnic">CNIC</label>
+                <input type="text"
+                       id="cnic"
+                       name="cnic"
+                       placeholder="00000-0000000-0"
+                       maxlength="15"
+                       oninput="formatCNIC(this)">
+                <br>
+                <p id="marksDisplay" style="display: none;">Accounting Fundamentals marks: <span id="marksValue"></span></p>
+                <button type="button" onclick="checkRoll()" id="findButton">Find</button>
+                <p id="errorMessage">Fill required fields</p>
+            </div>
+            <div class="footer">
+                <a href="https://xeeshan.carrd.co/">
+                    <span>© Developed and managed by Zeeshan Sarfraz</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
