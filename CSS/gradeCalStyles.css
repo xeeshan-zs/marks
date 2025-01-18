@@ -68,7 +68,7 @@ body {
 
 @media (min-width: 1024px) {
     .container {
-        height: 100vh;
+        height:auto;
         overflow: hidden;
         padding: 2vh;
     }
