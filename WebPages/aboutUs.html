@@ -1,51 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Student Portal</title>
+        <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR
+        0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmll
+        d0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc
+        3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9
+        pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1vbml0b3ItY29nIj48cGF0aCBkP
+        SJNMTIgMTd2NCIvPjxwYXRoIGQ9Im0xNS4yIDQuOS0uOS0uNCIvPjxwYXRoIGQ9Im0xNS4
+        yIDcuMS0uOS40Ii8+PHBhdGggZD0ibTE2LjkgMy4yLS40LS45Ii8+PHBhdGggZD0ibTE2L
+        jkgOC44LS40LjkiLz48cGF0aCBkPSJtMTkuNSAyLjMtLjQuOSIvPjxwYXRoIGQ9Im0xOS4
+        1IDkuNy0uNC0uOSIvPjxwYXRoIGQ9Im0yMS43IDQuNS0uOS40Ii8+PHBhdGggZD0ibTIxL
+        jcgNy41LS45LS40Ii8+PHBhdGggZD0iTTIyIDEzdjJhMiAyIDAgMCAxLTIgMkg0YTIgMiA
+        wIDAgMS0yLTJWNWEyIDIgMCAwIDEgMi0yaDciLz48cGF0aCBkPSJNOCAyMWg4Ii8+PGNpc
+        mNsZSBjeD0iMTgiIGN5PSI2IiByPSIzIi8+PC9zdmc+">    
     <link rel="stylesheet" href="../CSS/aboutUsStyles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Us Section -->
-    <div class="about-us">
-        <div class="header">
-            <h1>About Us</h1>
-            <p>
-                We are a team of two enthusiastic students from NUML, working together on this project as a fun and creative way to serve our classmates and university community. What started as a small initiative has now evolved into a platform offering a variety of services designed to make student life easier.
-
-                Our goal is to provide a wide range of helpful services, from academic support to other practical solutions, all aimed at enhancing the student experience. Whether it's marking services, academic assistance, or other future services, we're committed to helping our peers succeed and make their journey through university smoother and more enjoyable
-            </p>
+    <div class="header">
+        <div class="logo">
+            Student Portal
+            <span>By ZS & ATRONS</span>
         </div>
-
-        <div class="team">
-            <h2>Our Team</h2>
-            <div class="team-members">
-                <div class="member">
-                    <img src="#" alt="Team Member">
-                    <h3>Abdullah Irshad</h3>
-                    <p>...</p>
-                </div>
-                <div class="member">
-                    <img src="#" alt="Team Member">
-                    <h3>Zeeshan Sarfaraz</h3>
-                    <p>...</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <span>� 2025 All rights reserved.</span>
+        <div class="tabs">
+            <a href="..\index.html">Home</a>
+            <a href="#contact-section">Contact</a>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+            </button>
         </div>
     </div>
 
+    <div class="container">
+        <h1 class="title">About Us</h1>
+        <div class="about-us">
+            <p class="about-description">
+                We are a team of two enthusiastic students from NUML, working together on this project as a fun and creative way to serve our classmates and university community. Our goal is to provide a wide range of helpful services, from academic support to other practical solutions, all aimed at enhancing the student experience.
+            </p>
+        </div>
+
+        
+            <br>
+            <br>
+            <h1 class="title">Meet Our Team</h1>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="..\assets\images\shani.jpg" alt="Zeeshan Sarfraz" class="profile-img">
+                <h2 class="member-name">Zeeshan Sarfraz</h2>
+                <p class="member-role">Lead Developer</p>
+                <p class="member-bio">
+                    Computer Science student with a passion for web development and UI/UX design. 
+                    Specializes in creating intuitive and responsive web applications.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/xeeshan-zs" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/xeeshan-zs" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+    
+            <div class="team-member">
+                <img src="..\assets\images\atrons.jpeg" alt="ATRONS" class="profile-img">
+                <h2 class="member-name">ATRONS</h2>
+                <p class="member-role">Co-Developer</p>
+                <p class="member-bio">
+                    Talented developer focused on backend systems and database management.
+                    Passionate about creating efficient and scalable solutions.
+                    Provides and manages the domain infrastructure for this website.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/AbdTron" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <div id="contact-section" class="contact-section">
+        <h1 class="title">Contact</h1>
+        <div class="contact-buttons">
+            <a href="tel:+923109233844" class="contact-button">
+                📞 Phone
+            </a>
+            <a href="https://wa.me/923109233844" target="_blank" class="contact-button">
+                💬 WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="text-muted" href="/copyright/">© 2025. All rights reserved</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 text-center text-lg-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            &copy; Developed and managed by <a class="text-muted" href="https://xeeshan.carrd.co" target="_blank">Zeeshan Sarfraz</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleTheme() {
+            const body = document.documentElement;
+            const themeToggleImg = document.querySelector('.theme-toggle img');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'light') {
+                body.removeAttribute('data-theme');
+                themeToggleImg.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==";
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeToggleImg.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1vb24iPjxwYXRoIGQ9Ik0xMiAzYTYgNiAwIDAgMCA5IDkgOSA5IDAgMSAxLTktOVoiLz48L3N2Zz4=";
+            }
+        }
+    </script>
 </body>
 </html>
