@@ -79,12 +79,12 @@ body {
     margin-bottom: 2vh;
 }
 
-    .header h1 {
-        font-size: 34px;
-        font-weight: 700;
-        margin: 0;
-        color: #000;
-    }
+.header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+}
 
 .current-gpa {
     display: flex;
@@ -103,11 +103,11 @@ input {
     transition: all 0.2s;
 }
 
-    input:focus {
-        outline: none;
-        border-color: #007aff;
-        box-shadow: 0 0 0 3px rgba(0,122,255,0.2);
-    }
+input:focus {
+    outline: none;
+    border-color: #007aff;
+    box-shadow: 0 0 0 3px rgba(0,122,255,0.2);
+}
 
 .grades-table {
     width: 100%;
@@ -120,23 +120,23 @@ input {
     overflow: hidden;
 }
 
-    .grades-table th, .grades-table td {
-        padding: 12px;
-        border-bottom: 1px solid #e5e5ea;
-        text-align: center;
-    }
+.grades-table th, .grades-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e5ea;
+    text-align: center;
+}
 
-    .grades-table th {
-        background-color: #f8f8f8;
-        font-weight: 600;
-        color: #666;
-    }
+.grades-table th {
+    background-color: #f8f8f8;
+    font-weight: 600;
+    color: #666;
+}
 
-    .grades-table input {
-        width: 90%;
-        padding: 8px;
-        border-radius: 8px;
-    }
+.grades-table input {
+    width: 90%;
+    padding: 8px;
+    border-radius: 8px;
+}
 
 button {
     background: #007aff;
@@ -150,13 +150,13 @@ button {
     transition: all 0.2s;
 }
 
-    button:hover {
-        background: #0066d6;
-    }
+button:hover {
+    background: #0066d6;
+}
 
-    button:active {
-        transform: scale(0.98);
-    }
+button:active {
+    transform: scale(0.98);
+}
 
 .controls {
     display: flex;
@@ -183,13 +183,13 @@ button {
     flex: 1;
 }
 
-    .summary-item label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        color: #666;
-        font-size: 15px;
-    }
+.summary-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #666;
+    font-size: 15px;
+}
 
 .disabled-input {
     background-color: #f2f2f7;
@@ -216,28 +216,28 @@ input[type=number] {
     text-align: center;
 }
 
-    .footer a {
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        background: rgba(0, 122, 255, 0.1);
-    }
+.footer a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(0, 122, 255, 0.1);
+}
 
-        .footer a:hover {
-            background: rgba(0, 122, 255, 0.2);
-            transform: translateY(-2px);
-        }
+.footer a:hover {
+    background: rgba(0, 122, 255, 0.2);
+    transform: translateY(-2px);
+}
 
-    .footer span {
-        color: #007AFF;
-        font-size: 14px;
-        font-weight: 500;
-    }
+.footer span {
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-    .footer a:hover span {
-        text-decoration: underline;
-    }
+.footer a:hover span {
+    text-decoration: underline;
+}
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -255,14 +255,14 @@ input[type=number] {
         color: #fff;
     }
 
-        .grades-table th {
-            background-color: #2c2c2e;
-            color: #999;
-        }
+    .grades-table th {
+        background-color: #2c2c2e;
+        color: #999;
+    }
 
-        .grades-table td {
-            border-color: #38383a;
-        }
+    .grades-table td {
+        border-color: #38383a;
+    }
 
     .disabled-input {
         background-color: #2c2c2e;
@@ -277,9 +277,9 @@ input[type=number] {
         background: rgba(0, 122, 255, 0.15);
     }
 
-        .footer a:hover {
-            background: rgba(0, 122, 255, 0.25);
-        }
+    .footer a:hover {
+        background: rgba(0, 122, 255, 0.25);
+    }
 }
 
 @media (max-width: 768px) {
