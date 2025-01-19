@@ -1,5 +1,4 @@
-
-
+/* Navigation Styles */
 nav {
     background-color: #333; /* Dark background for the menu bar */
     width: 100%;
@@ -39,7 +38,6 @@ nav ul li a:hover {
     border-radius: 5px; /* Rounded corners on hover */
 }
 
-
 /* General Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
@@ -48,9 +46,10 @@ body {
     background-color: #1a1a1a;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align to top to prevent vertical centering */
     height: 100vh;
     color: #ffffff;
+    padding-top: 60px; /* Add padding to prevent content from being hidden under the navbar */
 }
 
 .container {
@@ -61,6 +60,8 @@ body {
     background-color: #313131;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-top: 70px; /* Adjust margin to ensure no overlap with the fixed navbar */
+    margin-bottom: 50px; /* Add extra space at the bottom of the container */
 }
 
 .header h1 {
@@ -104,6 +105,7 @@ body {
 
 .button-container {
     margin-top: 40px;
+    margin-bottom: 30px; /* Extra space below the button */
 }
 
 .upload-button {
@@ -127,3 +129,30 @@ body {
     background-color: #3e8e41;
     transform: translateY(0);
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Increase padding on mobile for better spacing */
+    }
+
+    .container {
+        margin-top: 10px; /* More space on top for smaller screens */
+        padding: 20px;
+        margin-bottom: 50px; /* Ensure more space at the bottom */
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .rules-box {
+        padding: 20px;
+    }
+
+    .upload-button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
