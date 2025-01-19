@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="../CSS/timtableStyle.css">
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="aboutUs.html">About</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <button id="theme-toggle" onclick="toggleTheme()">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+            </button>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>Time Table Department of Computer Science</h1>
+    </div>
+
+    <div class="sub-header">CS-II-B</div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Slot</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1st</td>
+                    <td>
+                        OOP-LAB <br>
+                        LAB-1 <br>
+                        <b>Shahmin Sharafat</b>
+                    </td>
+                    <td>
+                        Object Oriented Programming <br>
+                        <b>29-S</b>
+                        <b>Shahmin Sharafat</b>
+                    </td>
+                    <td>
+                        Discrete Structures <br>
+                        <b>29-S</b>
+                        <b>Jannat ul Firdous</b>
+                    </td>
+                    <td>
+                        Civics & Community Engagement <br>
+                        <b>29-S</b>
+                        <b>Dr. M Irfan</b>
+                    </td>
+                    <td>
+                        Expository Writing <br>
+                        <b>29-S</b>
+                        <b>Sadia Rafique</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2nd</td>
+                    <td>
+                        Calculus <br>
+                        <b>29-S</b>
+                        <b>Nasir Ghaffar</b>
+                    </td>
+                    <td>
+                        Accounting Fundamentals <br>
+                        <b>29-S</b>
+                        <b>Saba Iqbal</b>
+                    </td>
+                    <td>
+                        Civics & Community Engagement <br>
+                        <b>29-S</b>
+                        <b>Dr. M Irfan</b>
+                    </td>
+                    <td>
+                        Pre-Math 2 <br>
+                        <b>33-S</b>
+                        <b>Dr. Nadeem Azhar</b>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <div>© 2025. All rights reserved</div>
+        <div>© Developed and managed by Zeeshan Sarfraz</div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            const themeToggleImg = document.querySelector('#theme-toggle img');
+            if (newTheme === 'light') {
+                themeToggleImg.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1vb24iPjxwYXRoIGQ9Ik0xMiAzYTYgNiAwIDAgMCA5IDkgOSA5IDAgMSAxLTktOVoiLz48L3N2Zz4=";
+            } else {
+                themeToggleImg.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==";
+            }
+        }
+    </script>
+</body>
+</html>
