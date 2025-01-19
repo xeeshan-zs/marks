@@ -1,0 +1,197 @@
+:root[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --border-color: #38383a;
+    --header-bg: rgba(28, 28, 30, 0.8);
+    --card-bg: rgba(44, 44, 46, 0.8);
+    --nav-bg: rgba(28, 28, 30, 0.9);
+    --button-bg: #0a84ff;
+    --button-hover: #0071e3;
+    --task-pending: #ff9f0a;
+    --task-completed: #30d158;
+    --icon-filter: invert(1);
+}
+
+:root[data-theme="light"] {
+    --bg-color: #f2f2f7;
+    --text-color: #000000;
+    --border-color: rgba(60, 60, 67, 0.1);
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --button-bg: #007AFF;
+    --button-hover: #0056b3;
+    --task-pending: #ff9500;
+    --task-completed: #34c759;
+    --icon-filter: invert(0);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 16px;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 80px;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    padding: max(1rem, env(safe-area-inset-top)) 1rem 1rem;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    min-height: 44px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 0.5px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 8px;
+    padding: 0;
+    gap: 12px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--button-bg);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+nav ul li a:active {
+    opacity: 0.7;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 16px;
+    background: var(--header-bg);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    margin-top: 70px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tasks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.day-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.day-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-checkbox {
+    margin-right: 12px;
+}
+
+.task-content {
+    flex-grow: 1;
+}
+
+.task-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.task-due {
+    font-size: 12px;
+    color: var(--task-pending);
+}
+
+.task-completed .task-title {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.task-completed .task-due {
+    color: var(--task-completed);
+}
+
+#theme-toggle {
+    position: fixed;
+    top: max(12px, env(safe-area-inset-top));
+    right: max(12px, env(safe-area-inset-right));
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+#theme-toggle img {
+    width: 20px;
+    height: 20px;
+    filter: var(--icon-filter);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--nav-bg);
+    padding: 1rem;
+    text-align: center;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 0.5px solid var(--border-color);
+}
