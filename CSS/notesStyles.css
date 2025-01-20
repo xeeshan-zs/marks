@@ -1,158 +1,190 @@
-/* Navigation Styles */
+:root[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --header-bg: rgba(28, 28, 30, 0.8);
+    --card-bg: rgba(28, 28, 30, 0.8);
+    --nav-bg: rgba(28, 28, 30, 0.9);
+    --button-bg: #0A84FF;
+    --button-hover: #0066CC;
+    --rules-bg: rgba(44, 44, 46, 0.8);
+    --icon-filter: invert(1);
+}
+
+:root[data-theme="light"] {
+    --bg-color: #f2f2f7;
+    --text-color: #000000;
+    --border-color: rgba(60, 60, 67, 0.1);
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --button-bg: #007AFF;
+    --button-hover: #0056b3;
+    --rules-bg: rgba(255, 255, 255, 0.8);
+    --icon-filter: invert(0);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(80px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    -webkit-font-smoothing: antialiased;
+}
+
 nav {
-    background-color: #333; /* Dark background for the menu bar */
-    width: 100%;
+    background-color: var(--nav-bg);
+    padding: max(1rem, env(safe-area-inset-top)) 1rem 1rem;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    padding: 10px 0;
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for better visibility */
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 0.5px solid var(--border-color);
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
     display: flex;
-    justify-content: center; /* Center the menu items */
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    /*margin: 8px;*/
+    margin-right: 30px;
+    padding: 0;
+    gap: 12px;
 }
 
 nav ul li {
-    margin: 0 15px;
-}
+    margin: 0;
+    flex-shrink: 0;
+}#theme-toggle {
+     right: max(24px, env(safe-area-inset-right)); /* Increased spacing */
+ }
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 5px 10px; /* Add some padding for better clickability */
-    transition: color 0.3s, background-color 0.3s; /* Smooth transitions for hover effect */
-}
-
-nav ul li a:hover {
-    color: #007AFF; /* Highlight the link text */
-    background-color: rgba(0, 122, 255, 0.1); /* Add a subtle background color on hover */
-    border-radius: 5px; /* Rounded corners on hover */
-}
-
-/* General Styles */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align to top to prevent vertical centering */
-    height: 100vh;
-    color: #ffffff;
-    padding-top: 60px; /* Add padding to prevent content from being hidden under the navbar */
+    color: var(--button-bg);
+    font-size: clamp(14px, 4vw, 15px);
+    font-weight: 400;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
 }
 
 .container {
-    width: 100%;
-    max-width: 900px;
-    padding: 30px;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 20px;
+}
+
+.header {
     text-align: center;
-    background-color: #313131;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin-top: 70px; /* Adjust margin to ensure no overlap with the fixed navbar */
-    margin-bottom: 50px; /* Add extra space at the bottom of the container */
+    padding: 20px;
+    background: var(--header-bg);
+    border-radius: 16px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
 }
 
 .header h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.content {
-    margin-top: 20px;
+    margin: 0;
+    font-size: clamp(24px, 5vw, 32px);
 }
 
 .rules-box {
-    background-color: #2c2c2c;
-    padding: 25px 35px;
+    background: var(--rules-bg);
+    padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px;
-    text-align: left; /* Align text to the left */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
 }
 
 .rules-box h2 {
-    font-size: 28px;
-    color: #ffffff;
-    margin-bottom: 15px;
+    margin-top: 0;
+    font-size: 20px;
 }
 
 .rules-box ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 18px;
-    color: #f0f0f0;
-    margin-left: 20px; /* Add some space on the left side of the list */
+    padding-left: 20px;
 }
 
-.rules-box ul li {
-    margin-bottom: 15px;
-    line-height: 1.6;
+.rules-box li {
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .button-container {
-    margin-top: 40px;
-    margin-bottom: 30px; /* Extra space below the button */
+    text-align: center;
 }
 
 .upload-button {
     display: inline-block;
-    background-color: #4CAF50;
+    background: var(--button-bg);
     color: #ffffff;
-    font-size: 20px;
-    padding: 15px 30px;
-    text-decoration: none;
+    padding: 12px 24px;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: none;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
 }
 
 .upload-button:hover {
-    background-color: #45a049;
-    transform: translateY(-3px);
+    background: var(--button-hover);
 }
 
-.upload-button:active {
-    background-color: #3e8e41;
-    transform: translateY(0);
+#theme-toggle {
+    position: fixed;
+    top: max(19px, env(safe-area-inset-top));
+    right: max(4px, env(safe-area-inset-right));
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
 }
 
-/* Mobile adjustments */
+#theme-toggle {
+    right: max(4px, env(safe-area-inset-right));
+    height: 12px;
+    filter: var(--icon-filter);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--nav-bg);
+    padding: 1rem;
+    text-align: center;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 0.5px solid var(--border-color);
+}
+
 @media (max-width: 768px) {
-    body {
-        padding-top: 80px; /* Increase padding on mobile for better spacing */
-    }
-
     .container {
-        margin-top: 10px; /* More space on top for smaller screens */
-        padding: 20px;
-        margin-bottom: 50px; /* Ensure more space at the bottom */
-    }
-
-    .header h1 {
-        font-size: 28px;
+        padding: 10px;
     }
 
     .rules-box {
-        padding: 20px;
+        padding: 15px;
     }
 
-    .upload-button {
-        font-size: 18px;
-        padding: 12px 24px;
+
+}
+@media (min-width: 769px) { /* Only apply margin-right on larger screens if needed*/
+    nav ul {
+        margin-right: 0;
     }
 }
-
