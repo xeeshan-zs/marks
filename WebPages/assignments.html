@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Assignment Submission</title>
+    <link rel="stylesheet" href="../CSS/assignmentStyle.css">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZpbGUtdXAiPjxwYXRoIGQ9Ik0xNSAySDZhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWN1oiLz48cGF0aCBkPSJNMTQgMnY0YTIgMiAwIDAgMCAyIDJoNCIvPjxwYXRoIGQ9Ik0xMiAxMnY2Ii8+PHBhdGggZD0ibTE1IDE1LTMtMy0zIDMiLz48L3N2Zz4=">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="gradeCal.html">Calculator</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="marks.html">Marks</a> </li>
+        <li><a href="time table.html">Timetable</a></li>
+        <li><a href="weekly tasks.html">Weekly Tasks</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+    </ul>
+</nav>
+
+<button id="theme-toggle">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+</button>
+
+<div class="header">
+    <h1>Assignment Submission</h1>
+</div>
+
+<div class="submission-container">
+    <div class="submission-card">
+        <div class="submission-title">DSA Assignment 1</div>
+        <a href="https://forms.gle/your-form-link-1" class="submission-link" target="_blank">Submit Assignment</a>
+    </div>
+
+    <div class="submission-card">
+        <div class="submission-title">DBMS Assignment 1</div>
+        <a href="https://forms.gle/your-form-link-2" class="submission-link" target="_blank">Submit Assignment</a>
+    </div>
+
+    <div class="submission-card">
+        <div class="submission-title">DLD Assignment 1</div>
+        <a href="https://forms.gle/your-form-link-3" class="submission-link" target="_blank">Submit Assignment</a>
+    </div>
+</div>
+
+<footer>
+    <div>© 2025. All rights reserved</div>
+    <div>© Developed and managed by Zeeshan Sarfraz</div>
+</footer>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        const root = document.documentElement;
+        const currentTheme = root.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', newTheme);
+    });
+</script>
+</body>
+</html>
