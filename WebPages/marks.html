@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>BSCS II-B</title>
     <link rel="icon" href="../assets/images/marks-icon.svg">
     <link rel="stylesheet" href="../CSS/marksStyles.css">
@@ -10,54 +10,54 @@
 
 </head>
 <body>
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="gradeCal.html">Calculator</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="time table.html">Timetable</a></li>
+        <li><a href="weekly tasks.html">Weekly Tasks</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+    </ul>
+</nav>
 
-    <!-- Menubar -->
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="gradeCal.html">Calculator</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="time table.html">Timetable</a></li>
-            <li><a href="weekly tasks.html">Weekly Tasks</a></li>
-            <li><a href="notifications.html">Notifications</a></li>
+<a id="theme-toggle">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+</a>
+<br><br><br><br><br><br><br><br><br><br><br>
 
-
-        </ul>
-    </nav>
-
-    <div class="page-container">
-        <div class="container">
-            <h1>Welcome Students</h1>
-            <div class="form-container">
-                <label for="rollNumber">Roll Number</label>
-                <input type="text"
-                       id="rollNumber"
-                       name="rollNumber"
-                       placeholder="CS-000"
-                       maxlength="6"
-                       pattern="CS-\d{3}"
-                       value="CS-"
-                       oninput="this.value = this.value.startsWith('CS-') ? this.value : 'CS-' + this.value.replace(/\D/g, '').slice(0,3)">
-                <br>
-                <label for="cnic">CNIC</label>
-                <input type="text"
-                       id="cnic"
-                       name="cnic"
-                       placeholder="00000-0000000-0"
-                       maxlength="15"
-                       oninput="formatCNIC(this)">
-                <br>
-                <p id="marksDisplay" style="display: none;">Accounting Fundamentals marks: <span id="marksValue"></span></p>
-                <button type="button" onclick="checkRoll()" id="findButton">Find</button>
-                <p id="errorMessage">Fill required fields</p>
-            </div>
-            <div class="footer">
-                <a href="https://xeeshan.carrd.co/">
-                    <span>© Developed and managed by Zeeshan Sarfraz</span>
-                </a>
-            </div>
+<div class="page-container">
+    <div class="container">
+        <h1>Welcome Students</h1>
+        <div class="form-container">
+            <label for="rollNumber">Roll Number</label>
+            <input type="text"
+                   id="rollNumber"
+                   name="rollNumber"
+                   placeholder="CS-000"
+                   maxlength="6"
+                   pattern="CS-\d{3}"
+                   value="CS-"
+                   oninput="this.value = this.value.startsWith('CS-') ? this.value : 'CS-' + this.value.replace(/\D/g, '').slice(0,3)">
+            <br>
+            <label for="cnic">CNIC</label>
+            <input type="text"
+                   id="cnic"
+                   name="cnic"
+                   placeholder="00000-0000000-0"
+                   maxlength="15"
+                   oninput="formatCNIC(this)">
+            <br>
+            <p id="marksDisplay" style="display: none;">Accounting Fundamentals marks: <span id="marksValue"></span></p>
+            <button type="button" onclick="checkRoll()" id="findButton">Find</button>
+            <p id="errorMessage">Fill required fields</p>
         </div>
     </div>
+</div>
+<footer>
+    <div>© 2025. All rights reserved</div>
+    <div>© Developed and managed by Zeeshan Sarfraz</div>
+</footer>
 </body>
 </html>
