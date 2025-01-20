@@ -64,6 +64,19 @@ nav ul li a {
     border-radius: 8px;
     transition: background-color 0.2s;
 }
+#theme-toggle {
+    right: max(24px, env(safe-area-inset-right)); /* Increased right margin */
+}
+
+/* OR */
+
+nav ul li {
+    margin-right: 10px;  /* Add right margin to nav items */
+}
+nav ul li:last-child {
+    margin-right: 0;   /* Remove right margin from the last item */
+
+}
 
 .header {
     text-align: center;
@@ -149,4 +162,23 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-top: 0.5px solid var(--border-color);
+}
+nav {
+    /* Existing styles */
+}
+
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+    nav ul {
+        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+        justify-content: flex-start; /* Align items to the left */
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        padding-bottom: 1rem; /* Add some spacing */
+    }
+    nav ul li {
+        white-space: nowrap; /* Prevent items from breaking onto multiple lines*/
+    }
+    nav ul li a {
+        font-size: 14px; /* Slightly reduce font size */
+        padding: 6px 10px; /* Slightly reduce padding */
+    }
 }
