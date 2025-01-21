@@ -351,7 +351,7 @@ const studentResults = [
     },
     {
         rollNumber: "CS-361",
-        cnic: "35302-0537201-7",
+        cnic: "35302-9596415-7",
         name: "Muhammad Hashim Zahoor",
         image: "img.png",
         subjects: [
