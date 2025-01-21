@@ -218,15 +218,22 @@ input[type=number] {
 
 .footer a {
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    background: rgba(0, 122, 255, 0.1);
+    background: none !important;
+    padding: 0;
+    border: none;
 }
 
-.footer a:hover {
-    background: rgba(0, 122, 255, 0.2);
-    transform: translateY(-2px);
+.footer a span {
+    background: none !important;
+    padding: 0;
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer a:hover span {
+    text-decoration: underline;
+    color: #0056b3;
 }
 
 .footer span {
@@ -235,9 +242,8 @@ input[type=number] {
     font-weight: 500;
 }
 
-.footer a:hover span {
-    text-decoration: underline;
-}
+
+
 
 @media (prefers-color-scheme: dark) {
     body {
