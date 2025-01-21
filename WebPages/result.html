@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Student Result Portal</title>
+    <link rel="stylesheet" href="../CSS/resultStyle.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="gradeCal.html">Calculator</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="timeTable.html">Timetable</a></li>
+        <li><a href="weeklyTasks.html">Weekly Tasks</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="assignments.html">Assignment Submission</a></li>
+        <a id="theme-toggle">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+        </a>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="form-group">
+        <label for="rollNumber">Roll Number</label>
+        <input type="text"
+               id="rollNumber"
+               name="rollNumber"
+               placeholder="CS-000"
+               maxlength="6"
+               pattern="CS-\d{3}"
+               value="CS-"
+               oninput="this.value = this.value.startsWith('CS-') ? this.value : 'CS-' + this.value.replace(/\D/g, '').slice(0,3)">
+    </div>
+    <div class="form-group">
+        <label for="cnic">CNIC</label>
+        <input type="text"
+               id="cnic"
+               name="cnic"
+               placeholder="00000-0000000-0"
+               maxlength="15"
+               oninput="formatCNIC(this)">
+    </div>
+    <button onclick="showResult()">View Result</button>
+
+    <div id="errorMessage" class="error"></div>
+
+    <div class="result" id="result">
+        <img id="studentImage" src="" alt="Student Image">
+        <div class="student-details">
+            <span id="studentName"></span> <br>
+            Roll Number: <span id="studentRoll"></span>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Subject</th>
+                <th>Marks Obtained</th>
+                <th>Total Marks</th>
+            </tr>
+            </thead>
+            <tbody id="resultTable"></tbody>
+        </table>
+        <div class="disclaimer">
+            This result has been downloaded from
+            " https://students.atrons.net "
+            This is not a proper result from university.
+        </div>
+    </div>
+
+    <div class="print-btn" id="printBtn">
+        <button onclick="printResult()">Print Result as PDF</button>
+    </div>
+</div>
+
+<footer>
+    <div>© 2025. All rights reserved</div>
+    <div>© Developed and managed by Zeeshan Sarfraz</div>
+</footer>
+    <script src="../JS/resultScript.js"></script>
+</body>
+</html>
