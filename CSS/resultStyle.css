@@ -188,8 +188,8 @@ button:hover {
     width: clamp(80px, 15vw, 100px);
     height: clamp(80px, 15vw, 100px);
     margin: 0 auto 1rem;
-    object-fit: contain;
-    border-radius: 40%;
+    border-radius: 50%;
+    object-fit: contain; /* This ensures the image fits inside the container without cropping */
 }
 
 .result .student-details {

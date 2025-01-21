@@ -6,6 +6,7 @@
     <title>Student Result Portal</title>
     <link rel="icon" href="../assets/images/marks-icon.svg">
     <link rel="stylesheet" href="../CSS/resultStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
 </head>
 <body>
 <nav>
@@ -33,6 +34,7 @@
                value="CS-"
                oninput="this.value = this.value.startsWith('CS-') ? this.value : 'CS-' + this.value.replace(/\D/g, '').slice(0,3)">
     </div>
+
     <div class="form-group">
         <label for="cnic">CNIC</label>
         <input type="text"
@@ -42,6 +44,7 @@
                maxlength="15"
                oninput="formatCNIC(this)">
     </div>
+
     <button onclick="showResult()">View Result</button>
 
     <div id="errorMessage" class="error"></div>
@@ -79,6 +82,7 @@
     <div>© 2025. All rights reserved</div>
     <div>© Developed and managed by Zeeshan Sarfraz</div>
 </footer>
-    <script src="../JS/resultScript.js"></script>
+
+<script src="../JS/resultScript.js"></script>
 </body>
 </html>
