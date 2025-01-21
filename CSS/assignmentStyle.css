@@ -163,6 +163,18 @@ footer {
     -webkit-backdrop-filter: blur(10px);
     border-top: 0.5px solid var(--border-color);
 }
+
+footer a {
+    color: #ffffff; /* Ensure the link text stays white */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    color: #ffffff; /* Keep the text white on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
 nav {
     /* Existing styles */
 }
