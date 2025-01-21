@@ -359,8 +359,8 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 65 },
+            { subject: "Accounting Fundamentals", marks: 52 },
             { subject: "Discrete Structures", marks: 0 },
             { subject: "Civics & Community Engagement", marks: 0 }
         ]
