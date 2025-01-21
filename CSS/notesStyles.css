@@ -139,6 +139,7 @@ nav ul li a {
 
 .upload-button:hover {
     background: var(--button-hover);
+
 }
 
 #theme-toggle {

@@ -206,3 +206,8 @@ footer {
         padding: 12px;
     }
 }
+@media (max-width: 768px) {
+    .header{
+        margin-top: 130px;
+    }
+}

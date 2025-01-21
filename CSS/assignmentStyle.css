@@ -182,3 +182,8 @@ nav {
         padding: 6px 10px; /* Slightly reduce padding */
     }
 }
+@media (max-width: 768px) {
+    .header{
+        margin-top: 130px;
+    }
+}

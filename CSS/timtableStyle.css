@@ -80,6 +80,30 @@ nav ul li a {
 nav ul li a:active {
     opacity: 0.7;
 }
+.button-container {
+    text-align: center;
+}
+.upload-button {
+    text-align: center;
+    display: inline-block;
+    background: var(--button-bg);
+    color: #ffffff;
+    font-size: 18px;
+    font-family: -apple-system,'SF Pro Text', 'Helvetica Neue', sans-serif;
+    padding: 14px 20px;
+    border-radius: 8px;
+    text-decoration: aqua;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.upload-button:hover {
+    background: var(--button-hover);
+    background-color: #0051D5;
+
+    transform: scale(0.98);
+
+}
 
 .table-container {
     width: 100%;
@@ -223,5 +247,10 @@ footer {
         padding-right: max(16px, env(safe-area-inset-right));
         padding-bottom: max(80px, env(safe-area-inset-bottom));
         padding-top: max(16px, env(safe-area-inset-top));
+    }
+}
+@media (max-width: 768px) {
+    .header{
+        margin-top: 130px;
     }
 }

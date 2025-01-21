@@ -195,3 +195,8 @@ footer {
     -webkit-backdrop-filter: blur(10px);
     border-top: 0.5px solid var(--border-color);
 }
+@media (max-width: 768px) {
+    .header{
+        margin-top: 130px;
+    }
+}
