@@ -353,7 +353,7 @@ const studentResults = [
         rollNumber: "CS-361",
         cnic: "35202-9596415-7",
         name: "Muhammad Hashim Zahoor",
-        image: "img.png",
+        image: "../assets/images/students/361.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
