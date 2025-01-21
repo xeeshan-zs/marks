@@ -56,10 +56,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 67 },
+            { subject: "Accounting Fundamentals", marks: 65 },
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 66 }
         ]
     },
     {
@@ -72,10 +72,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 63},
+            { subject: "Accounting Fundamentals", marks: 50},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 60}
         ]
     },
     {
@@ -88,10 +88,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 68},
+            { subject: "Accounting Fundamentals", marks: 60},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 72}
         ]
     },
     {
@@ -104,10 +104,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 74},
+            { subject: "Accounting Fundamentals", marks: 71},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 76}
         ]
     },
     {
@@ -120,10 +120,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 85},
+            { subject: "Accounting Fundamentals", marks: 89},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 97 }
         ]
     },
     {
@@ -136,10 +136,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 57},
+            { subject: "Accounting Fundamentals", marks: 61},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 54}
         ]
     },
     {
@@ -152,10 +152,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 85},
+            { subject: "Accounting Fundamentals", marks: 80},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 89}
         ]
     },
     {
@@ -168,10 +168,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 79},
+            { subject: "Accounting Fundamentals", marks: 55},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 73}
         ]
     },
     {
@@ -185,7 +185,7 @@ const studentResults = [
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
             { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 25},
             { subject: "Discrete Structures", marks: 0 },
             { subject: "Civics & Community Engagement", marks: 0 }
         ]
@@ -200,10 +200,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 70},
+            { subject: "Accounting Fundamentals", marks: 65},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 82}
         ]
     },
     {
@@ -216,10 +216,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 79},
+            { subject: "Accounting Fundamentals", marks: 58},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 80}
         ]
     },
     {
@@ -232,10 +232,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 71},
+            { subject: "Accounting Fundamentals", marks: 53},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 71}
         ]
     },
     {
@@ -248,10 +248,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 80},
+            { subject: "Accounting Fundamentals", marks: 62},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 77}
         ]
     },
     {
@@ -264,10 +264,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 77},
+            { subject: "Accounting Fundamentals", marks: 55},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 77}
         ]
     },
     {
@@ -280,10 +280,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 70},
+            { subject: "Accounting Fundamentals", marks: 62},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 80}
         ]
     },  {
         rollNumber: "CS-357",
@@ -295,10 +295,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 68},
+            { subject: "Accounting Fundamentals", marks: 72},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 85}
         ]
     },
     {
@@ -311,10 +311,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 86},
+            { subject: "Accounting Fundamentals", marks: 70},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 87}
         ]
     },
     {
@@ -327,10 +327,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 71 },
+            { subject: "Accounting Fundamentals", marks: 60},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 82}
         ]
     },
     {
@@ -343,10 +343,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 61},
+            { subject: "Accounting Fundamentals", marks: 45},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 68}
         ]
     },
     {
@@ -362,7 +362,7 @@ const studentResults = [
             { subject: "Expository Writing", marks: 65 },
             { subject: "Accounting Fundamentals", marks: 52 },
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 64}
         ]
     },
     {
@@ -375,10 +375,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 75 },
+            { subject: "Accounting Fundamentals", marks: 54},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 88}
         ]
     },
     {
@@ -391,10 +391,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 77},
+            { subject: "Accounting Fundamentals", marks: 53},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 82}
         ]
     },
     {
@@ -407,10 +407,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 80},
+            { subject: "Accounting Fundamentals", marks: 80},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 87}
         ]
     },
     {
@@ -423,10 +423,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 64},
+            { subject: "Accounting Fundamentals", marks: 39},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 77}
         ]
     },
     {
@@ -439,10 +439,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 74},
+            { subject: "Accounting Fundamentals", marks: 52},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 78}
         ]
     },
     {
@@ -455,10 +455,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 66},
+            { subject: "Accounting Fundamentals", marks: 50},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 68}
         ]
     },
     {
@@ -471,10 +471,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 75},
+            { subject: "Accounting Fundamentals", marks: 65},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 90}
         ]
     },
     {
@@ -487,10 +487,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 65},
+            { subject: "Accounting Fundamentals", marks: 50},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 70}
         ]
     },
     {
@@ -503,10 +503,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks:65},
+            { subject: "Accounting Fundamentals", marks: 66},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 68}
         ]
     },
     {
@@ -519,10 +519,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 67 },
+            { subject: "Accounting Fundamentals", marks: 70},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 83}
         ]
     },
     {
@@ -535,10 +535,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 79},
+            { subject: "Accounting Fundamentals", marks: 63},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 86}
         ]
     },
     {
@@ -551,10 +551,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 83},
+            { subject: "Accounting Fundamentals", marks: 60},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 94}
         ]
     },
     {
@@ -567,10 +567,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 68},
+            { subject: "Accounting Fundamentals", marks: 62},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 77}
         ]
     }, {
         rollNumber: "CS-375",
@@ -582,10 +582,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 77},
+            { subject: "Accounting Fundamentals", marks: 66},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 87}
         ]
     },
     {
@@ -598,10 +598,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 65},
+            { subject: "Accounting Fundamentals", marks: 56},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 80}
         ]
     },
     {
@@ -614,10 +614,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 69},
+            { subject: "Accounting Fundamentals", marks: 60},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 73}
         ]
     },
     {
@@ -630,10 +630,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 84},
+            { subject: "Accounting Fundamentals", marks: 85},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 85}
         ]
     },
     {
@@ -646,10 +646,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 77},
+            { subject: "Accounting Fundamentals", marks: 63},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 94}
         ]
     },
     {
@@ -662,10 +662,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 68 },
+            { subject: "Accounting Fundamentals", marks: 57},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 83}
         ]
     },
     {
@@ -678,10 +678,10 @@ const studentResults = [
             { subject: "Calculus and Analytical Geometry", marks: 0 },
             { subject: "Object Oriented Programming (Lab)", marks: 0 },
             { subject: "Object Oriented Programming", marks: 0 },
-            { subject: "Expository Writing", marks: 0 },
-            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Expository Writing", marks: 74},
+            { subject: "Accounting Fundamentals", marks: 43},
             { subject: "Discrete Structures", marks: 0 },
-            { subject: "Civics & Community Engagement", marks: 0 }
+            { subject: "Civics & Community Engagement", marks: 77}
         ]
     }
     // Add more students as needed
