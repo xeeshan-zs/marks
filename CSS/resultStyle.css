@@ -276,6 +276,12 @@ footer {
             display: none !important; /* Added !important for higher specificity*/
         }
     }
+    @media print {
+        /* ... other print styles ... */
+        .result table, .result th, .result td {
+            border: 1px solid black !important; /* Force a black border for printing */
+        }
+    }
 
 }
 

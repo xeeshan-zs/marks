@@ -15,6 +15,675 @@ const studentResults = [
             { subject: "Civics & Community Engagement", marks: 87 },
         ]
     },
+    {
+        rollNumber: "CS-342",
+        cnic: "12345-6789012-3",
+        name: "Abdul Rehman",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 90 },
+            { subject: "Calculus and Analytical Geometry", marks: 85 },
+            { subject: "Object Oriented Programming (Lab)", marks: 88 },
+            { subject: "Object Oriented Programming", marks: 92 },
+            { subject: "Expository Writing", marks: 80 },
+            { subject: "Accounting Fundamentals", marks: 78 },
+            { subject: "Discrete Structures", marks: 89 },
+            { subject: "Civics & Community Engagement", marks: 87 },
+        ]
+    },{
+        rollNumber: "CS-000",
+        cnic: "00000-0000000-0",
+        name: "Student 1",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-341",
+        cnic: "35202-1421567-5",
+        name: "Abdul Rehman",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-342",
+        cnic: "36601-7109122-1",
+        name: "Ateeb Khalid",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-343",
+        cnic: "35202-8498405-1",
+        name: "Abdul Sami",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-344",
+        cnic: "34104-4843906-5",
+        name: "Abdul Ahad",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-345",
+        cnic: "35201-7578377-5",
+        name: "Abdullah Irshad",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-346",
+        cnic: "38201-3268906-7",
+        name: "Adeel Ahmed",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-347",
+        cnic: "32402-3956830-9",
+        name: "Ahmad Anwar",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-348",
+        cnic: "35202-6279376-1",
+        name: "Ali Husnain",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-350",
+        cnic: "35301-8410656-1",
+        name: "Student 2",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-351",
+        cnic: "34302-9700957-6",
+        name: "Eman Fatima",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-352",
+        cnic: "33302-2415581-0",
+        name: "Ezzah Nawaz",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-353",
+        cnic: "35200-8149405-0",
+        name: "Fareeha Fatima",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-354",
+        cnic: "33202-1783734-8",
+        name: "Farwa Fatima",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-355",
+        cnic: "33202-2520122-4",
+        name: "Fatima Zafar",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-356",
+        cnic: "36201-7395087-3",
+        name: "Farhan Faiz",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },  {
+        rollNumber: "CS-357",
+        cnic: "35201-9346276-7",
+        name: "Irfan Rasheed",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-358",
+        cnic: "35202-8132957-5",
+        name: "Javeria Javaid",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-359",
+        cnic: "35201-8389466-9",
+        name: "Laiba Bader",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-360",
+        cnic: "35202-3855067-8",
+        name: "Muhammad Faizan Saadi",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-361",
+        cnic: "35302-0537201-7",
+        name: "Muhammad Hashim Zahoor",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-362",
+        cnic: "33302-9326217-4",
+        name: "Muhammad Abdullah Khan",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-363",
+        cnic: "35202-7465836-9",
+        name: "Muhammad Ahsan Shahid",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-364",
+        cnic: "33202-4427103-4",
+        name: "Muhammad Ahsan Siddique",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-365",
+        cnic: "35202-4762149-1",
+        name: "Muhammad Ayish Hafeez",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-366",
+        cnic: "32202-4837251-5",
+        name: "Muhammad Danish Zia",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-367",
+        cnic: "32102-4671839-0",
+        name: "Muhammad Fahad Shaikh",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-368",
+        cnic: "35202-2191746-3",
+        name: "Muhammad Haseeb",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-369",
+        cnic: "35202-8831296-4",
+        name: "Muhammad Yarmiah Saddique",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-370",
+        cnic: "38404-2215877-3",
+        name: "Muhammad Zeeshan Sarfraz",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-371",
+        cnic: "35201-4687227-9",
+        name: "Muhammad Mujtaba Farooqi",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-372",
+        cnic: "35404-3348672-2",
+        name: "Muneeb Najam",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-373",
+        cnic: "34102-5617314-5",
+        name: "Noor Fatima",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-374",
+        cnic: "35202-1493578-6",
+        name: "Okasha",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    }, {
+        rollNumber: "CS-375",
+        cnic: "35201-8674457-8",
+        name: "Saher Farman",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-376",
+        cnic: "35201-7261842-1",
+        name: "Shahmir Hafeez",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-378",
+        cnic: "37405-4785301-9",
+        name: "Taha Shahid",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-379",
+        cnic: "38401-1029384-7",
+        name: "Ubaid Ullah Irshad",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-380",
+        cnic: "34501-6981253-4",
+        name: "Urooj Nisar",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-381",
+        cnic: "32403-5699834-1",
+        name: "Zair Haider",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    },
+    {
+        rollNumber: "CS-382",
+        cnic: "45207-5618384-2",
+        name: "Zawar Husain",
+        image: "img.png",
+        subjects: [
+            { subject: "Pre-Math II (Non Credit)", marks: 0 },
+            { subject: "Calculus and Analytical Geometry", marks: 0 },
+            { subject: "Object Oriented Programming (Lab)", marks: 0 },
+            { subject: "Object Oriented Programming", marks: 0 },
+            { subject: "Expository Writing", marks: 0 },
+            { subject: "Accounting Fundamentals", marks: 0 },
+            { subject: "Discrete Structures", marks: 0 },
+            { subject: "Civics & Community Engagement", marks: 0 }
+        ]
+    }
     // Add more students as needed
 ];
 
