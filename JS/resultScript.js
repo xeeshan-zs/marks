@@ -1,3 +1,8 @@
+document.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        document.getElementById('findButton').click();
+    }
+});
 function showResult() {
     const rollNumber = document.getElementById("rollNumber").value.trim();
     const cnic = document.getElementById("cnic").value.trim();
