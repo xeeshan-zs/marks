@@ -135,3 +135,18 @@ function showResult() {
             console.error(error);
         });
 }
+function printResult() {
+    window.print();
+}
+function formatCNIC(input) {
+    let value = input.value.replace(/\D/g, '');
+    if (value.length > 0) {
+        if (value.length <= 5) {
+            input.value = value;
+        } else if (value.length <= 12) {
+            input.value = value.slice(0,5) + '-' + value.slice(5);
+        } else {
+            input.value = value.slice(0,5) + '-' + value.slice(5,12) + '-' + value.slice(12,13);
+        }
+    }
+}
