@@ -50,7 +50,7 @@ const studentResults = [
         rollNumber: "CS-341",
         cnic: "35202-1421567-5",
         name: "Abdul Rehman",
-        image: "img.png",
+        image: "../assets/images/students/341.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -66,7 +66,7 @@ const studentResults = [
         rollNumber: "CS-342",
         cnic: "36601-7109122-1",
         name: "Ateeb Khalid",
-        image: "img.png",
+        image: "../assets/images/students/342.jpeg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -82,7 +82,7 @@ const studentResults = [
         rollNumber: "CS-343",
         cnic: "35202-8498405-1",
         name: "Abdul Sami",
-        image: "img.png",
+        image: "../assets/images/students/343.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -98,7 +98,7 @@ const studentResults = [
         rollNumber: "CS-344",
         cnic: "34104-4843906-5",
         name: "Abdul Ahad",
-        image: "img.png",
+        image: "../assets/images/students/344.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -114,7 +114,7 @@ const studentResults = [
         rollNumber: "CS-345",
         cnic: "35201-7578377-5",
         name: "Abdullah Irshad",
-        image: "img.png",
+        image: "../assets/images/students/345.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -130,7 +130,7 @@ const studentResults = [
         rollNumber: "CS-346",
         cnic: "38201-3268906-7",
         name: "Adeel Ahmed",
-        image: "img.png",
+        image: "../assets/images/students/346.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -146,7 +146,7 @@ const studentResults = [
         rollNumber: "CS-347",
         cnic: "32402-3956830-9",
         name: "Ahmad Anwar",
-        image: "img.png",
+        image: "../assets/images/students/347.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -162,7 +162,7 @@ const studentResults = [
         rollNumber: "CS-348",
         cnic: "35202-6279376-1",
         name: "Ali Husnain",
-        image: "img.png",
+        image: "../assets/images/students/348.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -194,7 +194,7 @@ const studentResults = [
         rollNumber: "CS-351",
         cnic: "34302-9700957-6",
         name: "Eman Fatima",
-        image: "img.png",
+        image: "../assets/images/students/351.JPG",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -210,7 +210,7 @@ const studentResults = [
         rollNumber: "CS-352",
         cnic: "33302-2415581-0",
         name: "Ezzah Nawaz",
-        image: "img.png",
+        image: "../assets/images/students/352.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -226,7 +226,7 @@ const studentResults = [
         rollNumber: "CS-353",
         cnic: "35200-8149405-0",
         name: "Fareeha Fatima",
-        image: "img.png",
+        image: "../assets/images/students/353.jpeg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -242,7 +242,7 @@ const studentResults = [
         rollNumber: "CS-354",
         cnic: "33202-1783734-8",
         name: "Farwa Fatima",
-        image: "img.png",
+        image: "../assets/images/students/354.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -258,7 +258,7 @@ const studentResults = [
         rollNumber: "CS-355",
         cnic: "33202-2520122-4",
         name: "Fatima Zafar",
-        image: "img.png",
+        image: "../assets/images/students/355.png",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -272,9 +272,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-356",
-        cnic: "36201-7395087-3",
+        cnic: "35201-5912679-9",
         name: "Farhan Faiz",
-        image: "img.png",
+        image: "../assets/images/students/356.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -287,9 +287,9 @@ const studentResults = [
         ]
     },  {
         rollNumber: "CS-357",
-        cnic: "35201-9346276-7",
+        cnic: "35102-9229477-9",
         name: "Irfan Rasheed",
-        image: "img.png",
+        image: "../assets/images/students/357.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -303,9 +303,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-358",
-        cnic: "35202-8132957-5",
+        cnic: "35202-5398052-8",
         name: "Javeria Javaid",
-        image: "img.png",
+        image: "../assets/images/students/358.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -319,9 +319,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-359",
-        cnic: "35201-8389466-9",
+        cnic: "35202-5233164-4",
         name: "Laiba Bader",
-        image: "img.png",
+        image: "../assets/images/students/359.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -335,9 +335,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-360",
-        cnic: "35202-3855067-8",
+        cnic: "35201-9601691-5",
         name: "Muhammad Faizan Saadi",
-        image: "img.png",
+        image: "../assets/images/students/360.jpeg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -367,9 +367,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-362",
-        cnic: "33302-9326217-4",
+        cnic: "35404-2702964-7",
         name: "Muhammad Abdullah Khan",
-        image: "img.png",
+        image: "../assets/images/students/362.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -383,9 +383,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-363",
-        cnic: "35202-7465836-9",
+        cnic: "35202-1628533-9",
         name: "Muhammad Ahsan Shahid",
-        image: "img.png",
+        image: "../assets/images/students/363.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -399,9 +399,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-364",
-        cnic: "33202-4427103-4",
+        cnic: "36502-1848650-1",
         name: "Muhammad Ahsan Siddique",
-        image: "img.png",
+        image: "../assets/images/students/364.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -415,9 +415,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-365",
-        cnic: "35202-4762149-1",
+        cnic: "32102-2835192-5",
         name: "Muhammad Ayish Hafeez",
-        image: "img.png",
+        image: "../assets/images/students/365.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -431,9 +431,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-366",
-        cnic: "32202-4837251-5",
+        cnic: "35503-0231268-1",
         name: "Muhammad Danish Zia",
-        image: "img.png",
+        image: "../assets/images/students/366.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -447,9 +447,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-367",
-        cnic: "32102-4671839-0",
+        cnic: "32304-6621089-5",
         name: "Muhammad Fahad Shaikh",
-        image: "img.png",
+        image: "../assets/images/students/367.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -463,9 +463,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-368",
-        cnic: "35202-2191746-3",
+        cnic: "35202-5035816-5",
         name: "Muhammad Haseeb",
-        image: "img.png",
+        image: "../assets/images/students/368.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -479,9 +479,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-369",
-        cnic: "35202-8831296-4",
+        cnic: "35202-5847881-3",
         name: "Muhammad Yarmiah Saddique",
-        image: "img.png",
+        image: "../assets/images/students/369.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -497,7 +497,7 @@ const studentResults = [
         rollNumber: "CS-370",
         cnic: "38404-2215877-3",
         name: "Muhammad Zeeshan Sarfraz",
-        image: "img.png",
+        image: "../assets/images/students/370.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -511,9 +511,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-371",
-        cnic: "35201-4687227-9",
+        cnic: "35201-0926430-3",
         name: "Muhammad Mujtaba Farooqi",
-        image: "img.png",
+        image: "../assets/images/students/371.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -527,9 +527,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-372",
-        cnic: "35404-3348672-2",
+        cnic: "35404-6545732-1",
         name: "Muneeb Najam",
-        image: "img.png",
+        image: "../assets/images/students/372.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -543,9 +543,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-373",
-        cnic: "34102-5617314-5",
+        cnic: "34102-4303284-6",
         name: "Noor Fatima",
-        image: "img.png",
+        image: "../assets/images/students/373.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -559,9 +559,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-374",
-        cnic: "35202-1493578-6",
+        cnic: "35202-4680119-2",
         name: "Okasha",
-        image: "img.png",
+        image: "../assets/images/students/374.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -574,9 +574,9 @@ const studentResults = [
         ]
     }, {
         rollNumber: "CS-375",
-        cnic: "35201-8674457-8",
+        cnic: "35201-4557403-8",
         name: "Saher Farman",
-        image: "img.png",
+        image: "../assets/images/students/375.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -590,9 +590,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-376",
-        cnic: "35201-7261842-1",
+        cnic: "35201-9784588-1",
         name: "Shahmir Hafeez",
-        image: "img.png",
+        image: "../assets/images/students/376.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -606,9 +606,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-378",
-        cnic: "37405-4785301-9",
+        cnic: "37405-0736903-5",
         name: "Taha Shahid",
-        image: "img.png",
+        image: "../assets/images/students/378.heic",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -622,9 +622,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-379",
-        cnic: "38401-1029384-7",
+        cnic: "38401-3392252-1",
         name: "Ubaid Ullah Irshad",
-        image: "img.png",
+        image: "../assets/images/students/379.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -638,9 +638,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-380",
-        cnic: "34501-6981253-4",
+        cnic: "34501-2673990-2",
         name: "Urooj Nisar",
-        image: "img.png",
+        image: "../assets/images/students/380.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -654,9 +654,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-381",
-        cnic: "32403-5699834-1",
+        cnic: "32403-4590228-7",
         name: "Zair Haider",
-        image: "img.png",
+        image: "../assets/images/students/381.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },
@@ -670,9 +670,9 @@ const studentResults = [
     },
     {
         rollNumber: "CS-382",
-        cnic: "45207-5618384-2",
+        cnic: "45207-7949809-5",
         name: "Zawar Husain",
-        image: "img.png",
+        image: "../assets/images/students/382.jpg",
         subjects: [
             { subject: "Pre-Math II (Non Credit)", marks: 0 },
             { subject: "Calculus and Analytical Geometry", marks: 0 },

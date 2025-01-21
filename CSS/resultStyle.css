@@ -188,8 +188,8 @@ button:hover {
     width: clamp(80px, 15vw, 100px);
     height: clamp(80px, 15vw, 100px);
     margin: 0 auto 1rem;
-    border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 40%;
 }
 
 .result .student-details {
