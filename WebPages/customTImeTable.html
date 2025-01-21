@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Weekly Timetable</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="../CSS/customTimeTable.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Timetable</h1>
+    <a class="theme-toggle" id="theme-toggle">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+
+    </a>
+</header>
+
+<div class="container">
+    <label for="passcode">Enter Pass-code</label>
+    <input type="text" id="passcode" placeholder="Enter your pass-code">
+    <button id="confirm-btn">Confirm</button>
+
+    <div id="timetable-container" class="hidden">
+        <div class="header">
+            <h1 id="department-heading">TIME TABLE</h1>
+        </div>
+        <div class="table-wrapper">
+            <table id="timetable">
+                <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Slot</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Timetable rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div>© 2025. All rights reserved</div>
+    <div>© Developed and managed by Zeeshan Sarfraz</div>
+</footer>
+
+<!-- Link to external JavaScript -->
+<script src="../JS/customTimeTableScript.js"></script>
+</body>
+</html>
