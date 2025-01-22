@@ -3,13 +3,75 @@ document.addEventListener('keypress', function (e) {
         document.getElementById('findButton').click();
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    handleClassChange(); // Set the initial visibility of elements
+});
+function handleClassChange() {
+    const className = document.getElementById("className").value;
+    const rollNumberGroup = document.getElementById("rollNumber").parentElement; // Get the parent div of rollNumber
+    const cnicGroup = document.querySelector('.cnic-group');
+
+    // Hide the Roll Number group if no class is selected
+    if (className === "") {
+        rollNumberGroup.classList.add('hidden'); // Hide Roll Number field and label
+    } else {
+        rollNumberGroup.classList.remove('hidden'); // Show Roll Number field and label
+    }
+
+    // Adjust roll number placeholder and format for specific classes
+    if (className === "1-A" || className === "1-B") {
+        const rollNumberInput = document.getElementById("rollNumber");
+        rollNumberInput.placeholder = "L-BSCS1234567";
+        rollNumberInput.value = "L-BSCS"; // Start with prefix for 1-A and 1-B
+        rollNumberInput.pattern = "^L-BSCS\\d{7}$"; // Pattern for "L-BSCS" format
+    } else if (className !== "") {
+        const rollNumberInput = document.getElementById("rollNumber");
+        rollNumberInput.placeholder = "CS-000";
+        rollNumberInput.value = "CS-"; // Start with prefix for other classes
+        rollNumberInput.pattern = "^CS-\\d{3}$"; // Pattern for "CS-" format
+    }
+
+    // Show CNIC group only if the selected class is "2-B"
+    if (className === "2-B") {
+        cnicGroup.classList.remove('hidden'); // Show CNIC group
+    } else {
+        cnicGroup.classList.add('hidden'); // Hide CNIC group
+    }
+}
+
+function adjustRollNumberFormat() {
+    const rollNumberInput = document.getElementById("rollNumber");
+    const className = document.getElementById("className").value;
+
+    if (className === "1-A" || className === "1-B") {
+        // Ensure roll number always starts with "L-BSCS"
+        const prefix = "L-BSCS";
+        const inputValue = rollNumberInput.value;
+
+        // Remove any character that isn't a number after "L-BSCS"
+        const inputWithoutPrefix = inputValue.replace(prefix, '').replace(/\D/g, '');
+
+        // Limit to 7 digits after the prefix
+        const normalizedRollNumber = inputWithoutPrefix.slice(0, 7);
+
+        // Set the value, combining prefix with normalized digits
+        rollNumberInput.value = `${prefix}${normalizedRollNumber}`;
+    } else {
+        // Logic for other classes
+        rollNumberInput.value = rollNumberInput.value.startsWith("CS-")
+            ? rollNumberInput.value
+            : "CS-" + rollNumberInput.value.replace(/\D/g, '').slice(0, 3);
+    }
+}
+
 function showResult() {
     const rollNumber = document.getElementById("rollNumber").value.trim();
     const cnic = document.getElementById("cnic").value.trim();
+    const className = document.getElementById("className").value.trim();
     const errorMessage = document.getElementById("errorMessage");
     const resultContainer = document.getElementById("result");
     const resultTable = document.getElementById("resultTable");
-    const studentImage = document.getElementById("studentImage"); // Student Image Element
+    const studentImage = document.getElementById("studentImage");
     const studentName = document.getElementById("studentName");
     const studentRoll = document.getElementById("studentRoll");
     const printBtn = document.getElementById("printBtn");
@@ -19,120 +81,48 @@ function showResult() {
     printBtn.style.display = "none";
     resultTable.innerHTML = ""; // Clear previous table contents
 
-    // Load the Excel file (from the assets folder)
+    if (!rollNumber || (className === "2-B" && !cnic)) {
+        errorMessage.textContent = "Please provide all required inputs.";
+        return;
+    }
+
+    // Load the Excel file
     fetch('../assets/results.xlsx')
         .then(response => response.arrayBuffer())
         .then(data => {
             const workbook = XLSX.read(data, { type: 'array' });
-            const sheetName = workbook.SheetNames[0];
-            const sheet = workbook.Sheets[sheetName];
 
-            // Convert the sheet into JSON
+            if (!workbook.SheetNames.includes(className)) {
+                errorMessage.textContent = "Invalid class name selected.";
+                return;
+            }
+
+            const sheet = workbook.Sheets[className];
             const students = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-            // Loop through the rows to find a match for both roll number and CNIC
             let found = false;
+
             for (let i = 1; i < students.length; i++) {
                 const student = students[i];
+                const rollNumberFromSheet = student[1] ? student[1].toString().trim() : '';
+                const cnicFromSheet = student[16] ? student[16].toString().trim() : '';
 
-                // Get roll number and CNIC from the sheet
-                const rollNumberFromSheet = student[1] ? student[1].toString().trim() : ''; // Roll number is in column 1 (index 0)
-                const cnicFromSheet = student[16] ? student[16].toString().trim() : ''; // CNIC is in column 17 (index 16)
-
-                // Normalize the roll number (e.g., extract numeric part from CS-345)
-                const normalizedRollNumber = rollNumberFromSheet.replace(/\D/g, '').trim();
-                const normalizedInputRoll = rollNumber.replace(/\D/g, '').trim();
-
-                // Check if both roll number and CNIC match
-                if (normalizedRollNumber === normalizedInputRoll && cnicFromSheet === cnic) {
-                    // Display the result if matched
-                    studentName.textContent = student[2]; // Student Name
-                    studentRoll.textContent = student[1]; // Roll Number
-
-                    // Load the student image based on roll number
-                    const imageUrl = `../assets/images/students/${normalizedRollNumber}.jpg`; // Image URL formed from normalized roll number
-                    studentImage.src = imageUrl;
-
-                    // Loop through subjects (columns 3 to 11)
-                    let totalMarks = 0; // To accumulate total marks
-                    for (let j = 3; j <= 10; j++) { // Ensure to loop correctly from subjects 1 to 8 (index 3 to 10)
-                        const row = document.createElement("tr");
-                        const marksObtained = student[j] || 0; // If no marks, default to 0
-                        totalMarks += marksObtained;
-
-                        row.innerHTML = ` 
-                            <td>${j - 2}</td>
-                            <td>${students[0][j]}</td>
-                            <td>${marksObtained}</td>
-                            <td>100</td>
-                        `;
-                        resultTable.appendChild(row);
-                    }
-
-                    // Add the Total row (index 11 should be the total column)
-                    const totalRow = document.createElement("tr");
-                    totalRow.innerHTML = ` 
-                        <td></td>
-                        <td>Total</td>
-                        <td>${totalMarks}</td>
-                        <td>800</td>
-                    `;
-                    resultTable.appendChild(totalRow);
-
-                    // Now map the correct values for Percentage, SGPA, CGPA, and Remarks
-                    const percentage = student[12] || 'N/A'; // Assuming percentage is in column 12
-                    const sgpa = student[13] || 'N/A'; // Assuming SGPA is in column 13
-                    const cgpa = student[14] || 'N/A'; // Assuming CGPA is in column 14
-                    const remarks = student[15] || 'N/A'; // Assuming Remarks is in column 15
-
-                    // Add the extra row below the Total row with Percentage, SGPA, CGPA, and Remarks
-                    const percentageRow = document.createElement("tr");
-                    percentageRow.innerHTML = ` 
-                        <td></td>
-                        <td>Percentage</td>
-                        <td>${percentage}%</td> <!-- Added percentage sign here -->
-                        <td></td>
-                    `;
-                    resultTable.appendChild(percentageRow);
-
-                    const sgpaRow = document.createElement("tr");
-                    sgpaRow.innerHTML = ` 
-                        <td></td>
-                        <td>SGPA</td>
-                        <td>${sgpa}</td>
-                        <td></td>
-                    `;
-                    resultTable.appendChild(sgpaRow);
-
-                    const cgpaRow = document.createElement("tr");
-                    cgpaRow.innerHTML = ` 
-                        <td></td>
-                        <td>CGPA</td>
-                        <td>${cgpa}</td>
-                        <td></td>
-                    `;
-                    resultTable.appendChild(cgpaRow);
-
-                    const remarksRow = document.createElement("tr");
-                    remarksRow.innerHTML = ` 
-                        <td></td>
-                        <td>Remarks</td>
-                        <td>${remarks}</td>
-                        <td></td>
-                    `;
-                    resultTable.appendChild(remarksRow);
-
-                    // Show the result container and print button
-                    resultContainer.style.display = "block";
-                    printBtn.style.display = "block";
+                // Match roll number and CNIC (for "2-B") or roll number only (for others)
+                if (
+                    (className === "2-B" && rollNumber === rollNumberFromSheet && cnic === cnicFromSheet) ||
+                    (className !== "2-B" && rollNumber === rollNumberFromSheet)
+                ) {
                     found = true;
+                    displayResult(student, students, rollNumber);
                     break;
                 }
             }
 
-            // If no student is found, show error
             if (!found) {
-                errorMessage.textContent = "No result found for the given Roll Number and CNIC.";
+                errorMessage.textContent =
+                    className === "2-B"
+                        ? "No result found for the given Roll Number and CNIC."
+                        : "No result found for the given Roll Number.";
             }
         })
         .catch(error => {
@@ -140,6 +130,104 @@ function showResult() {
             console.error(error);
         });
 }
+
+function displayResult(student, students, normalizedRollNumber) {
+    const resultContainer = document.getElementById("result");
+    const resultTable = document.getElementById("resultTable");
+    const studentImage = document.getElementById("studentImage");
+    const studentName = document.getElementById("studentName");
+    const studentRoll = document.getElementById("studentRoll");
+    const printBtn = document.getElementById("printBtn");
+
+    studentName.textContent = student[2]; // Student Name
+    studentRoll.textContent = student[1]; // Roll Number
+
+    // Dynamically determine the boundary for subjects till "Total"
+    const firstRow = students[0]; // Header row
+    let totalIndex = firstRow.indexOf("Total"); // Find the index of "Total"
+    if (totalIndex === -1) totalIndex = student.length; // If "Total" is not found, use full range
+
+    const imageUrl = `../assets/images/students/${normalizedRollNumber}.jpg`;
+    studentImage.src = imageUrl;
+
+    let totalMarks = 0;
+
+    // Iterate only through subject columns (from index 3 to the column before "Total")
+    for (let j = 3; j < totalIndex; j++) {
+        const row = document.createElement("tr");
+        const marksObtained = student[j] || 0; // Handle cases where marks are missing
+        totalMarks += marksObtained;
+
+        row.innerHTML = `
+            <td>${j - 2}</td>
+            <td>${students[0][j]}</td>
+            <td>${marksObtained}</td>
+            <td>100</td>
+        `;
+        resultTable.appendChild(row);
+    }
+
+    // Add the "Total" row
+    const totalRow = document.createElement("tr");
+    totalRow.innerHTML = `
+        <td></td>
+        <td>Total</td>
+        <td>${totalMarks}</td>
+        <td>${(totalIndex - 3) * 100}</td>
+    `;
+    resultTable.appendChild(totalRow);
+
+    // Parse percentage as-is and format to two decimal points if it's a number
+    const percentageRaw = student[totalIndex + 1];
+    const percentage = (!isNaN(parseFloat(percentageRaw)) && isFinite(percentageRaw))
+        ? parseFloat(percentageRaw).toFixed(2)
+        : 'N/A'; // Fallback to 'N/A' if percentage is not a valid number
+
+    const percentageRow = document.createElement("tr");
+    percentageRow.innerHTML = `
+        <td></td>
+        <td>Percentage</td>
+        <td>${percentage}%</td>
+        <td></td>
+    `;
+    resultTable.appendChild(percentageRow);
+
+    const sgpa = student[totalIndex + 2] || 'N/A';
+    const cgpa = student[totalIndex + 3] || 'N/A';
+    const remarks = student[totalIndex + 4] || 'N/A';
+
+    const sgpaRow = document.createElement("tr");
+    sgpaRow.innerHTML = `
+        <td></td>
+        <td>SGPA</td>
+        <td>${sgpa}</td>
+        <td></td>
+    `;
+    resultTable.appendChild(sgpaRow);
+
+    const cgpaRow = document.createElement("tr");
+    cgpaRow.innerHTML = `
+        <td></td>
+        <td>CGPA</td>
+        <td>${cgpa}</td>
+        <td></td>
+    `;
+    resultTable.appendChild(cgpaRow);
+
+    const remarksRow = document.createElement("tr");
+    remarksRow.innerHTML = `
+        <td></td>
+        <td>Remarks</td>
+        <td>${remarks}</td>
+        <td></td>
+    `;
+    resultTable.appendChild(remarksRow);
+
+    resultContainer.style.display = "block";
+    printBtn.style.display = "block";
+}
+
+
 function printResult() {
     window.print();
 }
