@@ -46,7 +46,7 @@
                oninput="adjustRollNumberFormat()">
     </div>
 
-    <div class="cnic-group hidden">
+    <div class="cnic-group hidden" id="cnicGroup">
         <label for="cnic">CNIC</label>
         <input type="text"
                id="cnic"
@@ -56,8 +56,9 @@
                oninput="formatCNIC(this)">
     </div>
 
+    <div class="find-btn" id="findBtn">
     <button onclick="showResult()" id="findButton">View Result</button>
-
+    </div>
     <div id="errorMessage" class="error"></div>
 
     <div class="result" id="result">
@@ -78,9 +79,11 @@
             <tbody id="resultTable"></tbody>
         </table>
         <div class="disclaimer">
+            This is not a proper result from university.
+            <br>
             This result has been downloaded from
             " https://students.atrons.net "
-            This is not a proper result from university.
+
         </div>
     </div>
 

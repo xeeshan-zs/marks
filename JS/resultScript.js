@@ -150,6 +150,14 @@ function displayResult(student, students, normalizedRollNumber) {
     const imageUrl = `../assets/images/students/${normalizedRollNumber}.jpg`;
     studentImage.src = imageUrl;
 
+// Handle the case where the image is not found
+    studentImage.onerror = () => {
+        studentImage.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXIiPjxwYXRoIGQ9Ik0xOSAyMXYtMmE0IDQgMCAwIDAtNC00SDlhNCA0IDAgMCAwLTQgNHYyIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSI3IiByPSI0Ii8+PC9zdmc+';
+    };
+
+    studentName.textContent = student[2]; // Student Name
+    studentRoll.textContent = student[1]; // Roll Number
+
     let totalMarks = 0;
 
     // Iterate only through subject columns (from index 3 to the column before "Total")

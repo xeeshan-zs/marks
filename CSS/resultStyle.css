@@ -268,7 +268,7 @@ footer {
         padding: 0;
         max-width: 100%;
     }
-    header, footer, .form-group, .print-btn, #theme-toggle ,nav,.form-group{
+    header, footer,.cnic-group,.find-btn, .form-group, .print-btn, #theme-toggle ,nav,.form-group{
         display: none;
     }
     .result {
@@ -311,5 +311,12 @@ footer {
     }
     .container{
         margin-top: 150px;
+    }
+}
+@media print {
+    .disclaimer {
+        color: red; /* Change text color to red */
+        font-size: 18px; /* Set font size slightly larger */
+        font-weight: bold; /* Make the text bold for emphasis (optional) */
     }
 }
