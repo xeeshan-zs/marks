@@ -9,7 +9,7 @@ themeToggle.addEventListener('click', () => {
 
 const timetables = {
     "CS2B": {
-        department: "TIME TABLE DEPARTMENT OF COMPUTER SCIENCE",
+        department: "BSCS II-B Time Table",
         schedule: [
             ["CS-II-B", "1st", "OOP-LAB\nLAB-1\nShahmin Sharafat", "Object Oriented Programming\n29-S\nShahmin Sharafat", "Accounting Fundamentals\n29-S\nSaba Iqbal", "Discrete Structures\n29-S\nNasir Ghaffar", "Expository Writing\n29-S\nSadia Rafique"],
             ["CS-II-B", "2nd", "Calculus\n30-S\nJannat ul Firdous", "Civics & Community Engagement\n29-S\nDr. M Irfan", "Pre-Math 2\n29-S\nDr. Nadeem Azhar", "", "Pre-Math 2\n33-S\nDr. Nadeem Azhar"]
