@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Weekly Tasks</title>
-    <link rel="stylesheet" href="../CSS/weeklyTaskStyle.css">
     <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxu
     cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2
     h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9I
@@ -13,110 +12,327 @@
     WRlLWNhbGVuZGFyLWNoZWNrIj48cGF0aCBkPSJNOCAydjQiLz48cGF0aCBkPSJNMT
     YgMnY0Ii8+PHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB4PSIzIiB5PSI0IiB
     yeD0iMiIvPjxwYXRoIGQ9Ik0zIDEwaDE4Ii8+PHBhdGggZD0ibTkgMTYgMiAyIDQtNCIvPjwvc3ZnPg==">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
 
-   </head>
+
+    <style>:root[data-theme="dark"] {
+        --bg-color: #000000;
+        --text-color: #ffffff;
+        --border-color: #38383a;
+        --header-bg: rgba(28, 28, 30, 0.8);
+        --card-bg: rgba(44, 44, 46, 0.8);
+        --nav-bg: rgba(28, 28, 30, 0.9);
+        --button-bg: #0a84ff;
+        --button-hover: #0071e3;
+        --task-pending: #ff9f0a;
+        --task-completed: #30d158;
+        --icon-filter: invert(1);
+    }
+
+    :root[data-theme="light"] {
+        --bg-color: #f2f2f7;
+        --text-color: #000000;
+        --border-color: rgba(60, 60, 67, 0.1);
+        --header-bg: rgba(255, 255, 255, 0.8);
+        --card-bg: rgba(255, 255, 255, 0.8);
+        --nav-bg: rgba(255, 255, 255, 0.9);
+        --button-bg: #007AFF;
+        --button-hover: #0056b3;
+        --task-pending: #ff9500;
+        --task-completed: #34c759;
+        --icon-filter: invert(0);
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 16px;
+        -webkit-font-smoothing: antialiased;
+        padding-bottom: 80px;
+    }
+
+    nav {
+        background-color: var(--nav-bg);
+        padding: max(1rem, env(safe-area-inset-top)) 1rem 1rem;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        min-height: 44px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 0.5px solid var(--border-color);
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 8px;
+        padding: 0;
+        gap: 12px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--button-bg);
+        font-size: 15px;
+        font-weight: 400;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background-color 0.2s;
+        white-space: nowrap;
+    }
+
+    nav ul li a:active {
+        opacity: 0.7;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 20px 16px;
+        background: var(--header-bg);
+        border-radius: 16px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--border-color);
+        margin-top: 70px;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .tasks-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .day-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 16px;
+        border: 1px solid var(--border-color);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .day-header {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .task-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .task-item:last-child {
+        border-bottom: none;
+    }
+
+    .task-checkbox {
+        margin-right: 12px;
+    }
+
+    .task-content {
+        flex-grow: 1;
+    }
+
+    .task-title {
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    .task-due {
+        font-size: 12px;
+        color: var(--task-pending);
+    }
+
+    .task-completed .task-title {
+        text-decoration: line-through;
+        opacity: 0.7;
+    }
+
+    .task-completed .task-due {
+        color: var(--task-completed);
+    }
+
+    #theme-toggle {
+        position: fixed;
+        top: max(12px, env(safe-area-inset-top));
+        right: max(12px, env(safe-area-inset-right));
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        z-index: 1001;
+    }
+
+    #theme-toggle img {
+        width: 20px;
+        height: 20px;
+        filter: var(--icon-filter);
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--nav-bg);
+        padding: 1rem;
+        text-align: center;
+        font-size: 14px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 0.5px solid var(--border-color);
+    }
+    @media (max-width: 768px) {
+        .header{
+            margin-top: 130px;
+        }
+    }
+    </style>
+</head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="result.html">Result</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="gradeCal.html">Calculator</a></li>
-            <li><a href="customTImeTable.html">Timetable</a></li>
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="result.html">Result</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="gradeCal.html">Calculator</a></li>
+        <li><a href="customTImeTable.html">Timetable</a></li>
 
-            <li><a href="notifications.html">Notifications</a></li>
-            <li><a href="assignments.html">Assignment Submission</a></li>
-        </ul>
-    </nav>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="assignments.html">Assignment Submission</a></li>
+    </ul>
+</nav>
 
-    <button id="theme-toggle">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+<button id="theme-toggle">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+</button>
 
-    </button>
+<div class="header">
+    <h1>Weekly Tasks</h1>
+</div>
 
-    <div class="header">
-        <h1>Weekly Tasks</h1>
-    </div>
+<div class="tasks-container" id="tasks-container">
+    <!-- Tasks will be loaded here dynamically -->
+</div>
 
-    <div class="tasks-container">
-        <div class="day-card">
-            <div class="day-header">Monday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">DSA Assignment</div>
-                    <div class="task-due">Due: 9:00 AM</div>
-                </div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox"  checked  class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">DSA Quiz</div>
-                    <div class="task-due">Completed</div>
-                </div>
-            </div>
-        </div>
+<footer>
+    <div>© 2025. All rights reserved</div>
+    <div>© Developed and managed by Zeeshan Sarfraz & Abdullah Irshad</div>
+</footer>
 
-        <div class="day-card">
-            <div class="day-header">Tuesday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">DLD Assignment</div>
-                    <div class="task-due">Due: 2:30 PM</div>
-                </div>
-            </div>
-        </div>
+<script>
+    async function loadTasks() {
+        try {
+            // Fetch Excel file
+            const response = await fetch('../assets/result.xlsx');
+            const arrayBuffer = await response.arrayBuffer();
+            const data = new Uint8Array(arrayBuffer);
+            const workbook = XLSX.read(data, { type: 'array' });
 
-        <div class="day-card">
-            <div class="day-header">Wednesday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">Chill Day</div>
-                    <div class="task-due">-</div>
-                </div>
-            </div>
-        </div>
+            // Get the "Tasks" sheet
+            const sheet = workbook.Sheets['Tasks'];
+            const tasks = XLSX.utils.sheet_to_json(sheet);
 
-        <div class="day-card">
-            <div class="day-header">Thursday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">Chill Day</div>
-                    <div class="task-due">-</div>
-                </div>
-            </div>
-        </div>
+            const tasksContainer = document.getElementById('tasks-container');
+            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
-        <div class="day-card">
-            <div class="day-header">Friday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">Chill Day</div>
-                    <div class="task-due">-</div>
-                </div>
-            </div>
-        </div>
-    </div>
+            // Clear existing content
+            tasksContainer.innerHTML = '';
 
-    
-    <footer>
-        <div>© 2025. All rights reserved</div>
-        <div>© Developed and managed by Zeeshan Sarfraz & Abdullah Irshad</div>
-    </footer>
+            // Create cards for each day
+            days.forEach(day => {
+                const dayTasks = tasks.filter(task => task.Day === day);
 
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            const root = document.documentElement;
-            const currentTheme = root.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            root.setAttribute('data-theme', newTheme);
-        });
-    </script>
+                const dayCard = document.createElement('div');
+                dayCard.className = 'day-card';
+
+                const dayHeader = document.createElement('div');
+                dayHeader.className = 'day-header';
+                dayHeader.textContent = day;
+                dayCard.appendChild(dayHeader);
+
+                // Add tasks for this day
+                dayTasks.forEach(task => {
+                    const taskItem = document.createElement('div');
+                    taskItem.className = 'task-item';
+                    if (task.Completed) {
+                        taskItem.classList.add('task-completed');
+                    }
+
+                    taskItem.innerHTML = `
+                            <input type="checkbox" class="task-checkbox" ${task.Completed ? 'checked' : ''}>
+                            <div class="task-content">
+                                <div class="task-title">${task.Title}</div>
+                                <div class="task-due">${task.DueTime || '-'}</div>
+                            </div>
+                        `;
+
+                    dayCard.appendChild(taskItem);
+                });
+
+                tasksContainer.appendChild(dayCard);
+            });
+
+            // Add checkbox event listeners
+            document.querySelectorAll('.task-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', function () {
+                    const taskItem = this.closest('.task-item');
+                    if (this.checked) {
+                        taskItem.classList.add('task-completed');
+                    } else {
+                        taskItem.classList.remove('task-completed');
+                    }
+                });
+            });
+
+        } catch (error) {
+            console.error('Error loading tasks:', error);
+            document.getElementById('tasks-container').innerHTML = '<p>Error loading tasks. Please make sure result.xlsx exists and has a "Tasks" sheet.</p>';
+        }
+    }
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        const root = document.documentElement;
+        const currentTheme = root.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', newTheme);
+    });
+
+    // Load tasks when page loads
+    window.addEventListener('load', loadTasks);
+</script>
 </body>
 </html>
