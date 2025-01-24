@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Assignment Submission</title>
     <link rel="stylesheet" href="../CSS/assignmentStyle.css">
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZpbGUtdXAiPjxwYXRoIGQ9Ik0xNSAySDZhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWN1oiLz48cGF0aCBkPSJNMTQgMnY0YTIgMiAwIDAgMCAyIDJoNCIvPjxwYXRoIGQ9Ik0xMiAxMnY2Ii8+PHBhdGggZD0ibTE1IDE1LTMtMy0zIDMiLz48L3N2Zz4=">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZpbGUtdXAiPjxwYXRoIGQ9Ik0xNSAySDZhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWN1oiLz48cGF0aCBkPSJNMTQgMnY0YTIgMiAwIDAgMCAyIDJoNCIvPjxwYXRoIGQ9Ik0xMiAxMnY2Ii8+PHBhdGggZD0ibTE1IDE1LTMtMy0zIDMiLz48L3N2Zz4=" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </head>
 <body>
 <nav>
@@ -29,21 +30,8 @@
     <h1>Assignment Submission</h1>
 </div>
 
-<div class="submission-container">
-    <div class="submission-card">
-        <div class="submission-title">DSA Assignment 1</div>
-        <a href="https://forms.gle/your-form-link-1" class="submission-link" target="_blank">Submit Assignment</a>
-    </div>
-
-    <div class="submission-card">
-        <div class="submission-title">DBMS Assignment 1</div>
-        <a href="https://forms.gle/your-form-link-2" class="submission-link" target="_blank">Submit Assignment</a>
-    </div>
-
-    <div class="submission-card">
-        <div class="submission-title">DLD Assignment 1</div>
-        <a href="https://forms.gle/your-form-link-3" class="submission-link" target="_blank">Submit Assignment</a>
-    </div>
+<div class="submission-container" id="submission-container">
+    <!-- Assignment cards will be dynamically loaded here -->
 </div>
 
 <footer>
@@ -51,15 +39,7 @@
     <div>© Developed and managed by Zeeshan & Abdullah Irshad</div>
 </footer>
 
+<script src="../JS/assignments.js"></script>
 
-<script>
-    const themeToggle = document.getElementById('theme-toggle');
-    themeToggle.addEventListener('click', () => {
-        const root = document.documentElement;
-        const currentTheme = root.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', newTheme);
-    });
-</script>
 </body>
 </html>

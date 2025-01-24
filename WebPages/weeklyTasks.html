@@ -13,110 +13,41 @@
     WRlLWNhbGVuZGFyLWNoZWNrIj48cGF0aCBkPSJNOCAydjQiLz48cGF0aCBkPSJNMT
     YgMnY0Ii8+PHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB4PSIzIiB5PSI0IiB
     yeD0iMiIvPjxwYXRoIGQ9Ik0zIDEwaDE4Ii8+PHBhdGggZD0ibTkgMTYgMiAyIDQtNCIvPjwvc3ZnPg==">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
 
-   </head>
+</head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="result.html">Result</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="gradeCal.html">Calculator</a></li>
-            <li><a href="customTImeTable.html">Timetable</a></li>
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="result.html">Result</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="gradeCal.html">Calculator</a></li>
+        <li><a href="customTImeTable.html">Timetable</a></li>
 
-            <li><a href="notifications.html">Notifications</a></li>
-            <li><a href="assignments.html">Assignment Submission</a></li>
-        </ul>
-    </nav>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="assignments.html">Assignment Submission</a></li>
+    </ul>
+</nav>
 
-    <button id="theme-toggle">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+<button id="theme-toggle">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+</button>
 
-    </button>
+<div class="header">
+    <h1>Weekly Tasks</h1>
+</div>
 
-    <div class="header">
-        <h1>Weekly Tasks</h1>
-    </div>
+<div class="tasks-container" id="tasks-container">
+    <!-- Tasks will be loaded here dynamically -->
+</div>
 
-    <div class="tasks-container">
-        <div class="day-card">
-            <div class="day-header">Monday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">DSA Assignment</div>
-                    <div class="task-due">Due: 9:00 AM</div>
-                </div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox"  checked  class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">DSA Quiz</div>
-                    <div class="task-due">Completed</div>
-                </div>
-            </div>
-        </div>
+<footer>
+    <div>© 2025. All rights reserved</div>
+    <div>© Developed and managed by Zeeshan Sarfraz & Abdullah Irshad</div>
+</footer>
 
-        <div class="day-card">
-            <div class="day-header">Tuesday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">DLD Assignment</div>
-                    <div class="task-due">Due: 2:30 PM</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">Wednesday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">Chill Day</div>
-                    <div class="task-due">-</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">Thursday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">Chill Day</div>
-                    <div class="task-due">-</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">Friday</div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-content">
-                    <div class="task-title">Chill Day</div>
-                    <div class="task-due">-</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <footer>
-        <div>© 2025. All rights reserved</div>
-        <div>© Developed and managed by Zeeshan Sarfraz & Abdullah Irshad</div>
-    </footer>
-
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            const root = document.documentElement;
-            const currentTheme = root.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            root.setAttribute('data-theme', newTheme);
-        });
-    </script>
+<script src="../JS/task.js"></script>
 </body>
 </html>
