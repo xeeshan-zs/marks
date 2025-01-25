@@ -6,22 +6,27 @@ themeToggle.addEventListener('click', () => {
     root.setAttribute('data-theme', newTheme);
 });
 
-async function loadAssignments() {
+async function loadAssignmentsFromCsv() {
     try {
-        const response = await fetch('../assets/assignment.xlsx');
-        const arrayBuffer = await response.arrayBuffer();
-        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        // Fetch the CSV file
+        const response = await fetch('../assets/assignment.txt');
+        const csvText = await response.text();
 
-        // Assuming the first sheet contains the data
-        const sheetName = workbook.SheetNames[0];
-        const sheet = workbook.Sheets[sheetName];
+        // Parse the CSV data using Papa.parse
+        const { data, errors } = Papa.parse(csvText, {
+            header: true, // Treat the first row as headers
+            skipEmptyLines: true, // Ignore empty rows
+        });
 
-        // Convert the sheet data to JSON
-        const assignments = XLSX.utils.sheet_to_json(sheet);
+        // Handle any parsing errors
+        if (errors.length > 0) {
+            console.error('Errors occurred while parsing the CSV:', errors);
+            return;
+        }
 
         // Dynamically populate the assignments
         const container = document.getElementById('submission-container');
-        assignments.forEach(assignment => {
+        data.forEach(assignment => {
             const card = document.createElement('div');
             card.classList.add('submission-card');
 
@@ -44,5 +49,5 @@ async function loadAssignments() {
     }
 }
 
-// Load assignments on page load
-loadAssignments();
+// Call the function when the page loads
+loadAssignmentsFromCsv();

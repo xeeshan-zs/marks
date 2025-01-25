@@ -1,15 +1,11 @@
 async function loadTasks() {
     try {
-        // Fetch Excel file
-        const response = await fetch('../assets/task.xlsx');
+        const response = await fetch('../assets/task.txt');
+        const csvText = await response.text();
 
-        const arrayBuffer = await response.arrayBuffer();
-        const data = new Uint8Array(arrayBuffer);
-        const workbook = XLSX.read(data, { type: 'array' });
-
-        // Get the "Tasks" sheet
-        const sheet = workbook.Sheets['Tasks'];
-        const tasks = XLSX.utils.sheet_to_json(sheet);
+        // Parse CSV using PapaParse
+        const parsedData = Papa.parse(csvText, { header: true });
+        const tasks = parsedData.data;
 
         const tasksContainer = document.getElementById('tasks-container');
         const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
@@ -33,12 +29,12 @@ async function loadTasks() {
             dayTasks.forEach(task => {
                 const taskItem = document.createElement('div');
                 taskItem.className = 'task-item';
-                if (task.Completed) {
+                if (task.Completed === 'true') {
                     taskItem.classList.add('task-completed');
                 }
 
                 taskItem.innerHTML = `
-                            <input type="checkbox" class="task-checkbox" ${task.Completed ? 'checked' : ''}>
+                            <input type="checkbox" class="task-checkbox" ${task.Completed === 'true' ? 'checked' : ''}>
                             <div class="task-content">
                                 <div class="task-title">${task.Title}</div>
                                 <div class="task-due">${task.DueTime || '-'}</div>
@@ -65,10 +61,12 @@ async function loadTasks() {
 
     } catch (error) {
         console.error('Error loading tasks:', error);
-        document.getElementById('tasks-container').innerHTML = '<p>Error loading tasks. Please make sure result.xlsx exists and has a "Tasks" sheet.</p>';
+        document.getElementById('tasks-container').innerHTML = '<p>Error loading tasks. Please make sure task.txt exists and has valid CSV format.</p>';
     }
 }
 
+// Load tasks when page loads
+window.addEventListener('load', loadTasks);
 // Theme toggle functionality
 const themeToggle = document.getElementById('theme-toggle');
 themeToggle.addEventListener('click', () => {

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../CSS/notificationsStyle.css">
     <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWJlbGwiPjxwYXRoIGQ9Ik0xMC4yNjggMjFhMiAyIDAgMCAwIDMuNDY0IDAiLz48cGF0aCBkPSJNMy4yNjIgMTUuMzI2QTEgMSAwIDAgMCA0IDE3aDE2YTEgMSAwIDAgMCAuNzQtMS42NzNDMTkuNDEgMTMuOTU2IDE4IDEyLjQ5OSAxOCA4QTYgNiAwIDAgMCA2IDhjMCA0LjQ5OS0xLjQxMSA1Ljk1Ni0yLjczOCA3LjMyNiIvPjwvc3ZnPg==">
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
 </head>
 <body>
 <nav>
@@ -39,40 +41,6 @@
     <div>© Developed and managed by Zeeshan Sarfraz & Abdullah Irshad</div>
 </footer>
 
-<script>
-    const themeToggle = document.getElementById('theme-toggle');
-    themeToggle.addEventListener('click', () => {
-        const root = document.documentElement;
-        const currentTheme = root.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', newTheme);
-    });
-
-    const loadEvents = async () => {
-        const response = await fetch('../assets/notification.xlsx');
-        const arrayBuffer = await response.arrayBuffer();
-        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-        const sheetName = workbook.SheetNames[0];
-        const sheet = workbook.Sheets[sheetName];
-        const data = XLSX.utils.sheet_to_json(sheet);
-
-        const eventsContainer = document.getElementById('events-container');
-        eventsContainer.innerHTML = ''; // Clear existing content
-
-        data.forEach(event => {
-            const eventCard = document.createElement('div');
-            eventCard.classList.add('event-card');
-            eventCard.innerHTML = `
-                <div class="event-title">${event.Title || 'No Title'}</div>
-                <div class="event-date">${event.Date || 'No Date'}</div>
-                <div class="event-location">${event.Location || 'No Location'}</div>
-                <div class="event-description">${event.Description || 'No Description'}</div>
-            `;
-            eventsContainer.appendChild(eventCard);
-        });
-    };
-
-    loadEvents();
-</script>
+<script src="../JS/notification.js"></script>
 </body>
 </html>
