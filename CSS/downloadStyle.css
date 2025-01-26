@@ -227,3 +227,30 @@ footer {
         padding-bottom: max(16px, env(safe-area-inset-bottom));
     }
 }
+
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+    nav ul {
+        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+        justify-content: flex-start; /* Align items to the left */
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        padding-bottom: 1rem; /* Add some spacing */
+    }
+    nav ul li {
+        white-space: nowrap; /* Prevent items from breaking onto multiple lines*/
+    }
+    nav ul li a {
+        font-size: 14px; /* Slightly reduce font size */
+        padding: 6px 10px; /* Slightly reduce padding */
+    }
+    nav{
+        height: 120px;
+    }
+    .container{
+        margin: calc(70px + env(safe-area-inset-top)) auto 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    }
+    .download-container{
+        padding: 16px 16px;
+    }
+}
