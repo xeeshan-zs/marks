@@ -36,6 +36,10 @@ async function loadAssignmentsFromCsv() {
 
             const link = document.createElement('a');
             link.classList.add('submit-a');
+            link.setAttribute('target', '_blank'); // Open in a new tab
+            link.setAttribute('rel', 'noopener noreferrer'); // Security best practice
+            link.href = assignment.Link; // Assuming 'Link' is the URL in the CSV
+
 
 // Creating the SVG element
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
