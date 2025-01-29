@@ -3,17 +3,16 @@ let currentRows = 0;
 const MAX_ROWS = 12;
 
 function getGradeAndPoints(marks) {
-    if (marks >= 90 && marks <= 100) return { grade: 'A1', points: 4.0 };
-    if (marks >= 80 && marks <= 89) return { grade: 'A2', points: 4.0 };
-    if (marks >= 77 && marks <= 79) return { grade: 'A3', points: 3.66 };
-    if (marks >= 74 && marks <= 76) return { grade: 'B1', points: 3.33 };
-    if (marks >= 70 && marks <= 73) return { grade: 'B2', points: 3.0 };
-    if (marks >= 67 && marks <= 69) return { grade: 'B3', points: 2.66 };
-    if (marks >= 64 && marks <= 66) return { grade: 'C1', points: 2.33 };
-    if (marks >= 60 && marks <= 63) return { grade: 'C2', points: 2.0 };
-    if (marks >= 50 && marks <= 59) return { grade: 'D', points: 1.5 };
-    if (marks >= 0 && marks <= 49) return { grade: 'F', points: 0.0 };
-    return { grade: '', points: 0 };
+    if (marks >= 90) return { grade: 'A+', points: 4.0 };
+    if (marks >= 80 && marks < 90) return { grade: 'A', points: 4.0 };
+    if (marks >= 75 && marks < 80) return { grade: 'B+', points: 3.50 };
+    if (marks >= 70 && marks < 75) return { grade: 'B', points: 3.00 };
+    if (marks >= 65 && marks < 70) return { grade: 'C+', points: 2.50 };
+    if (marks >= 60 && marks < 65) return { grade: 'C', points: 2.00 };
+    if (marks >= 55 && marks < 60) return { grade: 'D+', points: 1.50 };
+    if (marks >= 50 && marks < 55) return { grade: 'D', points: 1.00 };
+    if (marks < 50) return { grade: 'F', points: 0.0 };
+    return { grade: '', points: 0.0 };
 }
 
 function updateRowCalculations(row) {
