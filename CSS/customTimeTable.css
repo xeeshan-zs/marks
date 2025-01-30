@@ -327,3 +327,24 @@ th {
     }
 
 }
+
+/* Remove default list styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Space between menu items */
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Stick the theme toggle button to the right */
+#theme-toggle {
+    position: absolute;
+    right: 20px; /* Aligns to the right corner */
+    top: 50%;
+    transform: translateY(-50%);
+}
