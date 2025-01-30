@@ -237,7 +237,11 @@ function displayResult(student, students, normalizedRollNumber) {
 
 
 function printResult() {
-    window.print();
+    if (window.AndroidPrint) {
+        window.AndroidPrint.printPage();
+    } else {
+        window.print();
+    }
 }
 function formatCNIC(input) {
     let value = input.value.replace(/\D/g, '');
