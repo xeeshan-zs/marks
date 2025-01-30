@@ -310,3 +310,15 @@ nav ul li a:active {
     }
 
 }
+@media (max-width: 768px) {
+    #theme-toggle{
+        right: 30px;
+        transform: translateY(-158%);
+    }
+}
+#theme-toggle {
+    position: absolute;
+    right: 20px; /* Aligns to the right corner */
+    top: 50%;
+    transform: translateY(-50%);
+}
