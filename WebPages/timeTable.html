@@ -4,74 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Timetable</title>
-        <link rel="icon" href="../assets/images/time table.png">
+    <link rel="icon" href="../assets/images/time table.png">
     <link rel="stylesheet" href="../CSS/customTimeTable.css">
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="weeklyTasks.html">Weekly Tasks</a></li>
-            <li><a href="notifications.html">Notifications</a></li>
-            <li><a href="assignments.html">Assignment Submission</a></li>
-
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="weeklyTasks.html">Weekly Tasks</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="assignments.html">Assignment Submission</a></li>
+        <li>
             <a id="theme-toggle" onclick="toggleTheme()">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNMyAxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN1bi1tZWRpdW0iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTIgM3YxIi8+PHBhdGggZD0iTTEyIDIwdjEiLz48cGF0aCBkPSJNM3gxMmgxIi8+PHBhdGggZD0iTTIwIDEyaDEiLz48cGF0aCBkPSJtMTguMzY0IDUuNjM2LS43MDcuNzA3Ii8+PHBhdGggZD0ibTYuMzQzIDE3LjY1Ny0uNzA3LjcwNyIvPjxwYXRoIGQ9Im01LjYzNiA1LjYzNi43MDcuNzA3Ii8+PHBhdGggZD0ibTE3LjY1NyAxNy42NTcuNzA3LjcwNyIvPjwvc3ZnPg==" alt="Theme Toggle">
             </a>
-        </ul>
-    </nav>
+        </li>
+    </ul>
+</nav>
 
-    <div class="header">
-        <h1>Time Table BSCS III-B</h1>
-    </div>
+<div class="header">
+    <h1>Time Table BSCS III-B</h1>
+</div>
 
-    <div class="container">
-        <select id="passcode" disabled style="display: none;">
-            <option value="III-B" selected>3-B</option>
-
-        </select>
-        <button id="confirm-btn" style="display: none;">Confirm</button>
-
-
-        <div id="timetable-container" class="hidden">
-            <div class="sub-header" style="display: none;">
-                <h1 id="department-heading" style="display: none;">TIME TABLE</h1>
-            </div>
-            <div class="table-wrapper">
-                <table id="timetable">
-                    <thead>
-                    <tr>
-                        <th>Class</th>
-                        <th>Slot</th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednesday</th>
-                        <th>Thursday</th>
-                        <th>Friday</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <!-- Timetable rows will be dynamically inserted here -->
-                    </tbody>
-                </table>
-            </div>
+<div class="container">
+    <div id="timetable-container">
+        <div class="table-wrapper">
+            <table id="timetable">
+                <tbody>
+                <!-- Timetable rows will be dynamically inserted here -->
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
-    <footer>
-        <div><a class="text-muted" href="copyright.html/">© 2025. All rights reserved</a></div>
-        <div>© Developed and managed by Zeeshan & Abdullah Irshad</div>
-    </footer>
-    <script>
-        window.onload = function() {
-            document.getElementById("confirm-btn").click();
-        };
-    </script>
+<footer>
+    <div><a class="text-muted" href="copyright.html/">© 2025. All rights reserved</a></div>
+    <div>© Developed and managed by Zeeshan & Abdullah Irshad</div>
+</footer>
 
-    <script src="../JS/customTimeTableScript.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const timetableBody = document.querySelector("#timetable tbody");
 
+        // Load the Excel file from a predefined path
+        const filePath = "../assets/timetable.xlsx";
+        fetch(filePath)
+            .then(response => response.arrayBuffer())
+            .then(data => {
+                const workbook = XLSX.read(data, { type: "array" });
+                const sheetName = "III-B"; // Directly target III-B sheet
+                const sheet = workbook.Sheets[sheetName];
+
+                // Process the sheet data
+                const range = XLSX.utils.decode_range(sheet['!ref']);
+                const merges = sheet['!merges'] || [];
+                const dataArray = [];
+
+                // Initialize 2D array
+                for (let row = 0; row <= range.e.r; row++) {
+                    dataArray[row] = new Array(range.e.c + 1).fill("");
+                }
+
+                // First pass: fill all cells
+                Object.keys(sheet).forEach(cell => {
+                    if (cell[0] === '!') return;
+                    const addr = XLSX.utils.decode_cell(cell);
+                    dataArray[addr.r][addr.c] = sheet[cell].v || "";
+                });
+
+                // Second pass: handle merged cells
+                merges.forEach(merge => {
+                    const start = merge.s;
+                    const end = merge.e;
+                    const value = dataArray[start.r][start.c];
+
+                    for (let row = start.r; row <= end.r; row++) {
+                        for (let col = start.c; col <= end.c; col++) {
+                            dataArray[row][col] = value;
+                        }
+                    }
+                });
+
+                // Filter empty rows and populate table
+                dataArray.filter(row => row.some(cell => cell !== ""))
+                    .forEach(row => {
+                        const tr = document.createElement("tr");
+                        row.forEach(cell => {
+                            const td = document.createElement("td");
+                            td.textContent = cell || "";
+                            tr.appendChild(td);
+                        });
+                        timetableBody.appendChild(tr);
+                    });
+            })
+            .catch(error => {
+                console.error("Error loading timetable:", error);
+                alert("Failed to load III-B timetable");
+            });
+    });
+</script>
+
+<script src="../JS/customTimeTableScript.js"></script>
 </body>
 </html>

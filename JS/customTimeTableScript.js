@@ -73,7 +73,7 @@ fetch("../assets/timetable.xlsx")
     })
     .catch(error => {
         console.error("Error loading timetable:", error);
-        alert("Failed to load timetable file");
+        // alert("Failed to load timetable file");
     });
 
 confirmBtn.addEventListener("click", () => {
