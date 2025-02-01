@@ -7,6 +7,87 @@
   <link rel="icon" href="../assets/images/favi-icon.svg">
   <link rel="stylesheet" href="../CSS/homeStyles.css" />
   <script src="../JS/marksScript.js" defer></script>
+  <style>
+    :root {
+      --bg-color: #000000;
+      --text-color: #ffffff;
+      --header-bg: rgba(30, 30, 30, 0.8);
+      --border-color: #2c2c2c;
+      --card-bg: rgba(30, 30, 30, 0.8);
+      --text-muted: #8e8e93;
+      --accent-color: #007AFF;
+      --icon-filter: invert(1);
+    }
+
+    [data-theme="light"] {
+      --bg-color: #f2f2f7;
+      --text-color: #000000;
+      --header-bg: rgba(255, 255, 255, 0.8);
+      --border-color: #e5e5ea;
+      --card-bg: rgba(255, 255, 255, 0.8);
+      --text-muted: #8e8e93;
+      --accent-color: #007AFF;
+      --icon-filter: invert(0);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Authentication Styles */
+    .auth-container {
+      margin-top: 100px;
+      display: flex
+    ;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 176vh;
+      background: var(--bg-color);
+    }
+    .auth-box {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--border-color);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .auth-box label {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: var(--text-color);
+    }
+
+    .auth-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: var(--header-bg);
+      color: var(--text-color);
+      font-size: 16px;
+    }
+
+    .auth-box button {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    /* Rest of your existing CSS styles here */
+    /* ... (include all your previous CSS styles here) ... */
+  </style>
 </head>
 
 <body>
@@ -24,7 +105,10 @@
 
 </nav>
 
-<div class="container">
+
+
+<div class="container hidden">
+  <!-- Your original content here -->
   <div class="title"
        style="text-align: center; padding: 20px; background: var(--header-bg); border-radius: 16px; margin-bottom: 30px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border-color);">
     BSCS III-B
@@ -75,6 +159,14 @@
   </div>
 </div>
 
+<div class="auth-container">
+  <div class="auth-box">
+    <label for="nameInput">Say my name:</label>
+    <input type="text" id="nameInput" placeholder="Say my name">
+    <button onclick="checkName()">Confirm</button>
+  </div>
+</div>
+
 <footer class="footer text-muted">
   <div class="container-lg">
     <div class="row">
@@ -95,5 +187,23 @@
     </div>
   </div>
 </footer>
+<script>
+  function checkName() {
+    const nameInput = document.getElementById('nameInput').value.trim().toLowerCase();
+    if (['Zee', 'ZEE', 'zee'].includes(nameInput)) {
+      // Hide auth container
+      document.querySelector('.auth-container').classList.add('hidden');
+      // Show main container with service cards
+      document.querySelector('.container').classList.remove('hidden');
+      alert("You're God Damn Right");
+    } else {
+      alert('Access Denied. This page is only for CS 3-B');
+      document.getElementById('nameInput').value = '';
+    }
+  }
+
+
+
+</script>
 </body>
 </html>
