@@ -8,25 +8,53 @@ themeToggle.addEventListener('click', () => {
 
 async function loadAssignmentsFromCsv() {
     try {
-        // Fetch the CSV file
-        const response = await fetch('../assets/assignment.txt');
-        const csvText = await response.text();
+        // Add error logging for debugging
+        console.log('Fetching data...');
 
-        // Parse the CSV data using Papa.parse
-        const { data, errors } = Papa.parse(csvText, {
-            header: true, // Treat the first row as headers
-            skipEmptyLines: true, // Ignore empty rows
+        const response = await fetch('https://raw.githubusercontent.com/xeeshan-zs/idea/refs/heads/main/data.txt', {
+            method: 'GET',
+            headers: {
+                'Accept': 'text/plain',
+                'Cache-Control': 'no-cache'
+            },
         });
 
-        // Handle any parsing errors
-        if (errors.length > 0) {
-            console.error('Errors occurred while parsing the CSV:', errors);
-            return;
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        // Dynamically populate the assignments
+        const csvText = await response.text();
+        console.log('Received data:', csvText); // Debug log
+
+        // Check if we actually got data
+        if (!csvText) {
+            throw new Error('No data received from the server');
+        }
+
+        // Parse CSV with error handling
+        const parseResult = Papa.parse(csvText, {
+            header: true,
+            skipEmptyLines: true,
+            error: (error) => {
+                console.error('Papa Parse Error:', error);
+            }
+        });
+
+        if (!parseResult.data || parseResult.data.length === 0) {
+            throw new Error('No valid data found in CSV');
+        }
+
+        // Clear existing content
         const container = document.getElementById('submission-container');
-        data.forEach(assignment => {
+        container.innerHTML = '';
+
+        // Populate with new data
+        parseResult.data.forEach(assignment => {
+            if (!assignment.Title || !assignment.Link) {
+                console.warn('Skipping invalid assignment:', assignment);
+                return;
+            }
+
             const card = document.createElement('div');
             card.classList.add('submission-card');
 
@@ -36,12 +64,11 @@ async function loadAssignmentsFromCsv() {
 
             const link = document.createElement('a');
             link.classList.add('submit-a');
-            link.setAttribute('target', '_blank'); // Open in a new tab
-            link.setAttribute('rel', 'noopener noreferrer'); // Security best practice
-            link.href = assignment.Link; // Assuming 'Link' is the URL in the CSV
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+            link.href = assignment.Link;
 
-
-// Creating the SVG element
+            // Creating the SVG element
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             svg.setAttribute('aria-hidden', 'true');
             svg.setAttribute('stroke', 'currentColor');
@@ -52,7 +79,7 @@ async function loadAssignmentsFromCsv() {
 
             const path1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
             path1.setAttribute('stroke-width', '2');
-            path1.setAttribute('stroke', '#fffffff');
+            path1.setAttribute('stroke', '#ffffff');
             path1.setAttribute('d', 'M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125');
             path1.setAttribute('stroke-linejoin', 'round');
             path1.setAttribute('stroke-linecap', 'round');
@@ -61,30 +88,33 @@ async function loadAssignmentsFromCsv() {
             path2.setAttribute('stroke-linejoin', 'round');
             path2.setAttribute('stroke-linecap', 'round');
             path2.setAttribute('stroke-width', '2');
-            path2.setAttribute('stroke', '#fffffff');
+            path2.setAttribute('stroke', '#ffffff');
             path2.setAttribute('d', 'M17 15V18M17 21V18M17 18H14M17 18H20');
 
             svg.appendChild(path1);
             svg.appendChild(path2);
 
-// Creating the text element
+            // Creating the text element
             const text = document.createTextNode('Submit');
 
-// Append the SVG and text to the link
+            // Append the SVG and text to the link
             link.appendChild(svg);
             link.appendChild(text);
-
-// Append the link to the desired element (for example, the body)
-            document.body.appendChild(link);
 
             card.appendChild(title);
             card.appendChild(link);
             container.appendChild(card);
         });
+
     } catch (error) {
         console.error('Error loading assignments:', error);
+        // Display error to user
+        const container = document.getElementById('submission-container');
+        container.innerHTML = `<div class="error-message">Failed to load assignments. Error: ${error.message}</div>`;
     }
 }
 
-// Call the function when the page loads
-loadAssignmentsFromCsv();
+// Add event listener for DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    loadAssignmentsFromCsv();
+});
