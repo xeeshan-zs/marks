@@ -1,2 +1,3 @@
 Day,Title,Completed,DueTime
 Monday, DSA Lab Task 1 Deadline,false,8:00 AM
+Thursday, Digital Marketing Project Idea, false,11:00 AM
