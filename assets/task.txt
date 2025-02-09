@@ -1,2 +1,2 @@
 Day,Title,Completed,DueTime
-Monday, First Class of spring semester,false,8:00 AM
+Monday, DSA Lab Task 1 Deadline,false,8:00 AM
