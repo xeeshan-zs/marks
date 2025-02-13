@@ -1,4 +1,2 @@
 Day,Title,Completed,DueTime
-Monday, DSA Lab Task 1 Deadline,false,8:00 AM
-Thursday, Digital Marketing Project Idea, false,11:00 AM
-Thursday, Digital Marketing (Name top selling mobile phone companies in Lahore. Everyone student must have written these in their registers), false, 11:00 AM 
+Thursday, How much profit do Pepsi and Coca-Cola make during special occasions?, false, 20-Feb-2025
