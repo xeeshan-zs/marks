@@ -1,2 +1,2 @@
 Title,Link
-DSA Task 1 (Due till 11 Feb Midnight), https://docs.google.com/forms/d/e/1FAIpQLSeXD7WwmIBPxk8IzujmejWnPNYM_g-QnZ5Xb0Ng-BcxAtNiPw/viewform?usp=header
+DSA Lab Task 2 (Due till 17 Feb Midnight),https://forms.gle/uh7qiGU1rbZtDHCL8
