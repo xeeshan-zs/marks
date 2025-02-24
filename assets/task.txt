@@ -1,4 +1,5 @@
 Day,Title,Completed,DueTime
-Tuesday, DLD Assignment 1,false,8:00
-Thursday,(Digital Marketing) How much profit do Pepsi and Coca-Cola make during special occasions?, false, 20-Feb-2025
-Tuesday, Quiz 1 DLD Lecture(Everything done till now),false, 18-Feb-2025
+Thursday, DSA -> Quiz 1,false,8:00
+Thursday,(Digital Marketing) Do marketing of anything of your choice, false, Feb-2025
+Wednesday, Database -> Quiz 1, false, Feb-2025
+Friday, DLD -> Bring electrical components shared in group ,false, Feb-2025
