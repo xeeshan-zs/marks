@@ -5,3 +5,5 @@ Wednesday, Database -> Quiz 1, false, Feb-2025
 Friday, DLD -> Bring electrical components shared in group ,false, Feb-2025
 
 Thursday, Digital Marketing -> Assignment 1, false, 13 March 2025
+
+Thursday, Digital Marketing -> Quiz 1, false, 6 March 2025
