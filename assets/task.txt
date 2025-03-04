@@ -11,3 +11,5 @@ Wednesday, DLD -> Re-Quiz, false, 5 March
 Wednesday, Linear Algebra -> Quiz 1 (Everything done till now), false,5 March 2025
 
 Thursday, Digital Marketing -> Assignment 1, false, 13 March 2025
+
+Tuesday, Database -> Project Proposal, false, 18 & 25 March 2025
