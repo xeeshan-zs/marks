@@ -6,7 +6,7 @@ Thursday, Digital Marketing -> Presentation Day, false, 6 March 2025
 
 Tuesday, Entrepreneurship -> Quiz from Chapter 4, true, 4 March 2025
 
-Wednesday, DLD -> Re-Quiz, false, will be conducted after Quiz 2
+Wednesday, DLD -> Quiz 2 (Simplification of equation ), false, 12 March 2025
 
 Wednesday, Linear Algebra -> Quiz 1 (Everything done till now), false,5 March 2025
 
