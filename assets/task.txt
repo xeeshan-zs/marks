@@ -13,3 +13,7 @@ Wednesday, Linear Algebra -> Quiz 1 (Everything done till now), false,5 March 20
 Thursday, Digital Marketing -> Assignment 1, false, 13 March 2025
 
 Tuesday, Database -> Project Proposal, false, 18 & 25 March 2025
+
+Thursday, DSA -> Presentations, false, 6 & 13 March 2025
+
+Friday, DSA -> Presentations, false, 7 & 14 March 2025
