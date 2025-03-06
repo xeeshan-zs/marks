@@ -1,14 +1,14 @@
 Day,Title,Completed,DueTime
 
-Thursday, Digital Marketing -> Quiz 1, false, 6 March 2025
+Thursday, Digital Marketing -> Quiz 1, true, 6 March 2025
 
-Thursday, Digital Marketing -> Presentation Day, false, 6 March 2025
+Thursday, Digital Marketing -> Presentation Day (First 15 students according to roll numbers), false, 13 March 2025
 
 Tuesday, Entrepreneurship -> Quiz from Chapter 4, true, 4 March 2025
 
 Wednesday, DLD -> Quiz 2 (Simplification of equation ), false, 12 March 2025
 
-Wednesday, Linear Algebra -> Quiz 1 (Everything done till now), false,5 March 2025
+Wednesday, Linear Algebra -> Quiz 1 (Everything done till now), True,5 March 2025
 
 Thursday, Digital Marketing -> Assignment 1, false, 13 March 2025
 
