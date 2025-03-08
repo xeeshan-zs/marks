@@ -15,3 +15,5 @@ Friday, DSA -> Presentations, false, 14 March 2025
 Thursday, DSA -> Assignment 1 (searching in single and doubly linked list -> Should be hand written ), false, 13 March 2025
 
 Thursday, DSA -> Quiz 2 (Single and double linked list with all its functions -> including searching ), false, 13 March 2025
+
+Monday, DLD -> Assignment 2 (Shared in group), false, 10 March 2025
