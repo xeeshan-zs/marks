@@ -1,6 +1,6 @@
 Day,Title,Completed,DueTime
 
-Monday, -> Digital Marketing (Assignment posted in Google Classroom is to be submitted in printed form, also note that no assignment will be submitted after this date) ,false, 17 March 2025
+Monday,Digital Marketing -> (Assignment posted in Google Classroom is to be submitted in printed form & also note that no assignment will be submitted after this date) ,false, 17 March 2025
 
 Thursday, Digital Marketing -> Presentation Day (First 15 students according to roll numbers), false, 13 & 20 March 2025
 
