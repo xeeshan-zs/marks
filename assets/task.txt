@@ -1,19 +1,17 @@
 Day,Title,Completed,DueTime
 
-Thursday, Digital Marketing -> Presentation Day (First 15 students according to roll numbers), false, 13 March 2025
+Monday, -> Digital Marketing (Assignment posted in Google Classroom is to be submitted in printed form, also note that no assignment will be submitted after this date) ,false, 17 March 2025
 
-Wednesday, DLD -> Quiz 2 (Simplification of Boolean equation ), false, 12 March 2025
+Thursday, Digital Marketing -> Presentation Day (First 15 students according to roll numbers), false, 13 & 20 March 2025
 
-Thursday, Digital Marketing -> Assignment 1, false, 13 March 2025
+Friday, DLD -> Quiz 2 (Simplification of Boolean equation ), false, 14 March 2025
+
 
 Tuesday, Database -> Project Proposal, false, 18 & 25 March 2025
 
-Thursday, DSA -> Presentations, false, 13 March 2025
 
 Friday, DSA -> Presentations, false, 14 March 2025
 
-Thursday, DSA -> Assignment 1 (searching in single and doubly linked list -> Should be hand written ), false, 13 March 2025
+Friday, DSA -> Assignment 1 (searching in single and doubly linked list -> Should be hand written ), false, 14 March 2025
 
-Thursday, DSA -> Quiz 2 (Single and double linked list with all its functions -> including searching ), false, 13 March 2025
-
-Monday, DLD -> Assignment 2 (Shared in group), false, 10 March 2025
+Friday, DSA -> Quiz 2 (Single and double linked list with all its functions -> including searching ), false, 14 March 2025
