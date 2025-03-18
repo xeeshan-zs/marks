@@ -1,6 +1,6 @@
 Day,Title,Completed,DueTime
 
-Monday, Database -> Assignment posted in Google Classroom, false, 17 March 2025
+Monday, Database -> Assignment posted in Google Classroom, true, 17 March 2025
 
 Monday,Digital Marketing -> (Assignment posted in Google Classroom is to be submitted in printed form & also note that no assignment will be submitted after this date) ,false, 17 March 2025
 
