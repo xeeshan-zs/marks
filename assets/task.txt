@@ -2,6 +2,8 @@ Day,Title,Completed,DueTime
 
 Monday, DSA -> Assignment 2 , false,24 March 2025
 
+Monday, Database -> Assignment Viva of remaining students, false, 24 March 2024
+
 Tuesday, Entrepreneurship -> Quiz 2 (Shared in Google Classroom), false, 25 March, 2025
 
 Wednesday, DLD -> Quiz Re-take & Presentation Day, false, 26 March 2025
