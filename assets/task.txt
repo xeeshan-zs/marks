@@ -1,11 +1,3 @@
 Day,Title,Completed,DueTime
 
-Tuesday, Entrepreneurship -> Quiz 2 (Shared in Google Classroom), false, 25 March, 2025
-
-Wednesday, DLD -> Quiz Re-take & Presentation Day, false, 26 March 2025
-
-Thursday, Digital Marketing -> Presentation Day & Quiz 2, false, 27 March 2025
-
-Wednesday, Linear Algebra -> Presentation Day, false, 26 March 2025
-
-Friday, DLD -> Presentation Day, false, 28 March 2025
+Wednesday, Moj maro bacho, true, moj masti ka koi time nhi hota
