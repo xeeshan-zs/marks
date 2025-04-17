@@ -1,3 +1,4 @@
 Day,Title,Completed,DueTime
 
-Wednesday, Moj maro bacho, true, moj masti ka koi time nhi hota
+Monday, Database > all tables should be created on your laptop that have been posted in google classroom, false, 21 April 2025
+Thursday, Digital Marketing > Assignment 2 submission (only soft form), false, 24 April 2025
