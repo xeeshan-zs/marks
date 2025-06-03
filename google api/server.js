@@ -82,3 +82,19 @@ app.get('/api/results', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+app.get('/api/assignments', async (req, res) => {
+    try {
+        const auth = await authorize();
+        const data = await getSheetData(auth, 'assignment');
+        // Convert rows to objects using the header row
+        const [header, ...rows] = data;
+        const assignments = rows.map(row => {
+            const obj = {};
+            header.forEach((key, i) => obj[key] = row[i]);
+            return obj;
+        });
+        res.json(assignments);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to fetch assignments' });
+    }
+});
