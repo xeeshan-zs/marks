@@ -24,13 +24,13 @@ const themeToggle = document.getElementById('theme-toggle');
 
                 const title = document.createElement('div');
                 title.classList.add('submission-title');
-                title.textContent = assignment.Title;
+                title.textContent = assignment.Title; // Use the Title column
 
                 const link = document.createElement('a');
                 link.classList.add('submit-a');
                 link.setAttribute('target', '_blank');
                 link.setAttribute('rel', 'noopener noreferrer');
-                link.href = assignment.Link;
+                link.href = assignment.Links; // Use the Links column
 
                 // SVG icon
                 const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -71,5 +71,4 @@ const themeToggle = document.getElementById('theme-toggle');
         }
     }
 
-    // Call the function when the page loads
     loadAssignmentsFromSheet();
