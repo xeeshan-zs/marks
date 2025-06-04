@@ -76,6 +76,7 @@ document.addEventListener('keypress', function (e) {
         }
 
         fetch(`https://students.atrons.net/api/results?className=${encodeURIComponent(className)}`)
+
             .then(response => response.json())
             .then(students => {
                 if (!Array.isArray(students) || students.length === 0) {
