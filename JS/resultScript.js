@@ -19,7 +19,7 @@ function handleClassChange() {
     }
 
     // Adjust roll number placeholder and format for specific classes
-    if (className === "1-A" || className === "1-B") {
+    if (className === "1-A" || className === "1-B"|| className === "2-B" || className === "2-A") {
         const rollNumberInput = document.getElementById("rollNumber");
         rollNumberInput.placeholder = "L-BSCS1234567";
         rollNumberInput.value = "L-BSCS"; // Start with prefix for 1-A and 1-B
@@ -32,7 +32,7 @@ function handleClassChange() {
     }
 
     // Show CNIC group only if the selected class is "2-B"
-    if (className === "2-B") {
+    if (className === "3-B") {
         cnicGroup.classList.remove('hidden'); // Show CNIC group
     } else {
         cnicGroup.classList.add('hidden'); // Hide CNIC group
@@ -43,7 +43,7 @@ function adjustRollNumberFormat() {
     const rollNumberInput = document.getElementById("rollNumber");
     const className = document.getElementById("className").value;
 
-    if (className === "1-A" || className === "1-B") {
+    if (className === "1-A" || className === "1-B"|| className === "2-B" || className === "2-A") {
         // Ensure roll number always starts with "L-BSCS"
         const prefix = "L-BSCS";
         const inputValue = rollNumberInput.value;
@@ -81,7 +81,7 @@ function showResult() {
     printBtn.style.display = "none";
     resultTable.innerHTML = ""; // Clear previous table contents
 
-    if (!rollNumber || (className === "2-B" && !cnic)) {
+    if (!rollNumber || (className === "3-B" && !cnic)) {
         errorMessage.textContent = "Please provide all required inputs.";
         return;
     }
@@ -109,8 +109,8 @@ function showResult() {
 
                 // Match roll number and CNIC (for "2-B") or roll number only (for others)
                 if (
-                    (className === "2-B" && rollNumber === rollNumberFromSheet && cnic === cnicFromSheet) ||
-                    (className !== "2-B" && rollNumber === rollNumberFromSheet)
+                    (className === "3-B" && rollNumber === rollNumberFromSheet && cnic === cnicFromSheet) ||
+                    (className !== "3-B" && rollNumber === rollNumberFromSheet)
                 ) {
                     found = true;
                     displayResult(student, students, rollNumber);
@@ -120,7 +120,7 @@ function showResult() {
 
             if (!found) {
                 errorMessage.textContent =
-                    className === "2-B"
+                    className === "3-B"
                         ? "No result found for the given Roll Number and CNIC."
                         : "No result found for the given Roll Number.";
             }
