@@ -150,21 +150,15 @@ function displayResult(student, students, normalizedRollNumber) {
     const imageUrl = `../assets/images/students/${normalizedRollNumber}.jpg`;
     studentImage.src = imageUrl;
 
-// Handle the case where the image is not found
+    // Handle the case where the image is not found
     studentImage.onerror = () => {
         studentImage.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXIiPjxwYXRoIGQ9Ik0xOSAyMXYtMmE0IDQgMCAwIDAtNC00SDlhNCA0IDAgMCAwLTQgNHYyIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSI3IiByPSI0Ii8+PC9zdmc+';
     };
-
-    studentName.textContent = student[2]; // Student Name
-    studentRoll.textContent = student[1]; // Roll Number
-
-    let totalMarks = 0;
 
     // Iterate only through subject columns (from index 3 to the column before "Total")
     for (let j = 3; j < totalIndex; j++) {
         const row = document.createElement("tr");
         const marksObtained = student[j] || 0; // Handle cases where marks are missing
-        totalMarks += marksObtained;
 
         row.innerHTML = `
             <td>${j - 2}</td>
@@ -175,21 +169,21 @@ function displayResult(student, students, normalizedRollNumber) {
         resultTable.appendChild(row);
     }
 
-    // Add the "Total" row
+    // Add the "Total" row using value from Excel
     const totalRow = document.createElement("tr");
     totalRow.innerHTML = `
         <td></td>
         <td>Total</td>
-        <td>${totalMarks}</td>
+        <td>${student[totalIndex] || 'N/A'}</td>
         <td>${(totalIndex - 3) * 100}</td>
     `;
     resultTable.appendChild(totalRow);
 
-    // Parse percentage as-is and format to two decimal points if it's a number
+    // Use percentage as-is from Excel
     const percentageRaw = student[totalIndex + 1];
-    const percentage = (!isNaN(parseFloat(percentageRaw)) && isFinite(percentageRaw))
-        ? parseFloat(percentageRaw).toFixed(2)
-        : 'N/A'; // Fallback to 'N/A' if percentage is not a valid number
+    const percentage = percentageRaw !== undefined && percentageRaw !== null && percentageRaw !== ''
+        ? percentageRaw
+        : 'N/A';
 
     const percentageRow = document.createElement("tr");
     percentageRow.innerHTML = `
