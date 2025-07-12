@@ -109,8 +109,8 @@ function showResult() {
 
                 // Match roll number and CNIC (for "2-B") or roll number only (for others)
                 if (
-                    (className === "3-B" && rollNumber === rollNumberFromSheet && cnic === cnicFromSheet) ||
-                    (className !== "3-B" && rollNumber === rollNumberFromSheet)
+                    (className === "2-B" && rollNumber === rollNumberFromSheet && cnic === cnicFromSheet) ||
+                    (className !== "2-B" && rollNumber === rollNumberFromSheet)
                 ) {
                     found = true;
                     displayResult(student, students, rollNumber);
